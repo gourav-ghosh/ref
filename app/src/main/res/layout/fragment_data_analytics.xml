@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".screens.fragments.OrderListingFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Data Analytics"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen16"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/notification"
+                android:layout_width="@dimen/dimen32"
+                android:layout_height="@dimen/dimen32"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:padding="6dp"
+                android:background="@drawable/faded_orange_fill_circle"
+                android:src="@drawable/ic_notification_icon" />
+
+            <ImageView
+                android:id="@+id/filter_analytics"
+                android:layout_width="@dimen/dimen32"
+                android:layout_height="@dimen/dimen32"
+                android:layout_gravity="end"
+                android:padding="6dp"
+                android:layout_marginEnd="@dimen/dimen16"
+                android:layout_toStartOf="@id/notification"
+                android:background="@drawable/faded_orange_fill_circle"
+                android:src="@drawable/ic_filter_icon" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:background="@color/data_an_tab_color"
+            android:paddingBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="12sp"
+                android:id="@+id/tvSerialNo"
+                android:gravity="center_horizontal"
+                android:text="Serial No." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:id="@+id/tvSalesExecutive"
+                android:textSize="12sp"
+                android:drawableRight="@drawable/ic_down"
+                android:gravity="center_horizontal"
+                android:text="Sale Executive" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="12sp"
+                android:id="@+id/tvOrders"
+                android:drawableRight="@drawable/ic_down"
+                android:gravity="center_horizontal"
+                android:text="Orders" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:text="Total Amount" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/analytics_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/data_analytic_item_view" />
+
+
+    </LinearLayout>
+
+</layout>

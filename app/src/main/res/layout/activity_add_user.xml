@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.vendor.AddUserActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0D192F">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/white" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen16">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:visibility="gone"
+                    android:id="@+id/status_ll"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen30"
+                        android:layout_marginStart="@dimen/dimen_12"
+                        android:fontFamily="@font/outfit_regular"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dimen10"
+                        android:text="Status : " />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen30"
+                        android:gravity="center"
+                        android:background="@drawable/light_gray_bg10"
+                        android:layout_marginLeft="@dimen/dimen10"
+                        android:paddingLeft="@dimen/dimen5"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dimen10"
+                            android:layout_height="@dimen/dimen10"
+                            android:id="@+id/status_iv"/>
+
+                        <TextView
+                            android:id="@+id/status_tv"
+                            android:layout_width="wrap_content"
+                            android:maxLines="1"
+                            android:text="Active"
+                            android:paddingRight="@dimen/dimen10"
+                            android:layout_marginLeft="@dimen/dimen10"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:textColor="@color/gray"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/firstName"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/firstNameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:fontFamily="@font/outfit_regular"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/lastName"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/lastNameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:fontFamily="@font/outfit_regular"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="Date of Birth"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/dobET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_calender"
+                        android:editable="false"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="Date of Joining"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/dojET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_calender"
+                        android:editable="false"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/mob_num"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/mobilenoET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLength="10" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/select_role"
+                    android:id="@+id/role_til"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/select_role"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="none"
+                        android:fontFamily="@font/outfit_regular"
+                        android:textColor="@color/gray" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:id="@+id/vendor_company_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:enabled="false"
+                    android:hint="@string/select_vendor_company"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false"
+                    app:hintTextColor="@color/gray">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/select_vendor_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="none"
+                        android:fontFamily="@font/outfit_regular"
+                        android:textColor="@color/gray"
+                        android:visibility="visible"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:id="@+id/vendor_companyET_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/select_vendor_company"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false"
+                    app:hintTextColor="@color/gray"
+                    android:visibility="gone">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/vendor_companyET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:fontFamily="@font/outfit_regular"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:id="@+id/vendor_code_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/vendor_code_title"
+                    android:enabled="false"
+                    app:hintTextColor="@color/gray"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/vendor_codeET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:fontFamily="@font/outfit_regular"
+                        android:textColor="@color/gray"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="Branch"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/select_branch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="Email Id"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/emailET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:fontFamily="@font/outfit_regular"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/allowedDevices"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/allowed_devicesET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_ll"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:background="@drawable/gray_dotted_round5_border"
+                            android:paddingHorizontal="@dimen/dimen_12"
+                            android:layout_marginTop="@dimen/dimen20">
+
+                            <ImageView
+                                android:id="@+id/img_iv"
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dimen6"
+                                android:src="@drawable/ic_image" />
+
+                            <TextView
+                                android:id="@+id/chooseFile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="@dimen/dimen_12"
+                                android:layout_toEndOf="@id/img_iv"
+                                android:fontFamily="@font/outfit_medium"
+                                android:text="@string/drop_your_profile_pic_here_or_browse" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen6"
+                            android:layout_marginTop="12dp"
+                            android:background="@color/white"
+                            android:paddingHorizontal="@dimen/dimen_8"
+                            android:text="Profile Photo"
+                            android:textSize="@dimen/dimen_12" />
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Image format .png/.jpeg and ideal"
+                        android:textColor="@color/gray2"
+                        android:textSize="@dimen/dimen_8" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="dimension 250x250"
+                        android:textColor="@color/gray2"
+                        android:textSize="@dimen/dimen_8" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/upload_file_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_12"
+                    android:numColumns="3"
+                    android:visibility="gone"
+                    tools:listitem="@layout/upload_file_info" />
+
+                <LinearLayout
+                    android:id="@+id/permissions_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginVertical="@dimen/dimen_8">
+                    <RelativeLayout
+                        android:id="@+id/external_agent_eligibility_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+                        <TextView
+                            android:id="@+id/external_agent_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/outfit_medium"
+                            android:layout_marginVertical="@dimen/dimen_12"
+                            android:text="External Agent"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatToggleButton
+                            android:id="@+id/external_agent_toggleBtn"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/toggle_selector"
+                            android:textOff=""
+                            android:textOn="" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/complaint_eligibility_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+                        <TextView
+                            android:id="@+id/complaint_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/outfit_medium"
+                            android:layout_marginVertical="@dimen/dimen_12"
+                            android:text="Eligible For Complaints"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatToggleButton
+                            android:id="@+id/complaint_toggleBtn"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/toggle_selector"
+                            android:textOff=""
+                            android:textOn="" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/crm_eligibility_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/crm_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/outfit_medium"
+                            android:layout_marginVertical="@dimen/dimen_12"
+                            android:text="Eligible For CRM"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatToggleButton
+                            android:id="@+id/crm_toggleBtn"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/toggle_selector"
+                            android:textOff=""
+                            android:textOn="" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/worklog_eligibility_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/worklog_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/outfit_medium"
+                            android:layout_marginVertical="@dimen/dimen_12"
+                            android:text="Eligible For Worklog"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatToggleButton
+                            android:id="@+id/worklog_toggleBtn"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/toggle_selector"
+                            android:textOff=""
+                            android:textOn="" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/overtime_eligibility_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/overtime_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/outfit_medium"
+                            android:layout_marginVertical="@dimen/dimen_12"
+                            android:text="Eligible For Overtime"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatToggleButton
+                            android:id="@+id/overtime_toggleBtn"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/toggle_selector"
+                            android:textOff=""
+                            android:textOn="" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/order_eligibility_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/order_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/outfit_medium"
+                            android:layout_marginVertical="@dimen/dimen_12"
+                            android:text="Eligible For Order"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatToggleButton
+                            android:id="@+id/order_toggleBtn"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/toggle_selector"
+                            android:textOff=""
+                            android:textOn="" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/dimen16"
+                    android:paddingVertical="@dimen/dimen_8">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="start"
+                        android:background="@drawable/black_border_round_bg"
+                        android:fontFamily="@font/outfit_semibold"
+                        android:text="Cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darker_Blue" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:background="@drawable/orange_round_bg"
+                        android:fontFamily="@font/outfit_semibold"
+                        android:text="Save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

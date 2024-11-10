@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".screens.transactionFilters.TransactionHistoryDateFragment">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_8"
+            android:fontFamily="@font/outfit_medium"
+            android:text="Date"
+            android:textColor="@color/darker_Blue"
+            android:textStyle="bold" />
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/spinnerView"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:paddingVertical="@dimen/dimen_4"
+            android:background="@drawable/white_round_4bg"
+            android:textColor="@color/darker_Blue"
+            android:textColorHint="@color/gray"
+            android:fontFamily="@font/outfit_medium"
+            app:spinner_dismiss_notified_select="true"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_tint="@color/gray"
+            app:spinner_divider_color="@color/white"
+            app:spinner_divider_show="true"
+            app:spinner_item_array="@array/CustomDateList" />
+        <LinearLayout
+            android:id="@+id/custom_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:layout_marginBottom="@dimen/dimen_4"
+                android:fontFamily="@font/outfit_medium"
+                android:text="From Date"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/from_date"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_round_4bg"
+                android:drawableEnd="@drawable/ic_calender"
+                android:drawablePadding="@dimen/dimen_48"
+                android:fontFamily="@font/outfit_medium"
+                android:paddingHorizontal="@dimen/dimen_8"
+                android:paddingVertical="@dimen/dimen_4"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:layout_marginBottom="@dimen/dimen_4"
+                android:fontFamily="@font/outfit_medium"
+                android:text="To Date"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/to_date"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_round_4bg"
+                android:drawableEnd="@drawable/ic_calender"
+                android:drawablePadding="@dimen/dimen_48"
+                android:fontFamily="@font/outfit_medium"
+                android:paddingHorizontal="@dimen/dimen_8"
+                android:paddingVertical="@dimen/dimen_4"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

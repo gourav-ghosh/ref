@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screens.fragments.DeliveryDetailsFragment">
+
+    <RadioGroup
+        android:id="@+id/rbGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/delivery_details_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dimen20"
+            android:button="@null"
+            android:drawableLeft="@drawable/truck_icon_selector"
+            android:drawablePadding="@dimen/dimen_8"
+            android:fontFamily="@font/outfit_medium"
+            android:paddingStart="@dimen/dimen6"
+            android:text="Delivery Details"
+            android:textColor="@color/orange_black_selector"
+            android:textSize="@dimen/dimen_8" />
+
+        <RadioButton
+            android:id="@+id/purchase_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:drawableLeft="@drawable/pdf_icon_selector"
+            android:drawablePadding="@dimen/dimen_8"
+            android:fontFamily="@font/outfit_medium"
+            android:paddingStart="@dimen/dimen6"
+            android:text="Purchase Details"
+            android:textColor="@color/orange_black_selector"
+            android:textSize="@dimen/dimen_8" />
+    </RadioGroup>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
+</layout>
+

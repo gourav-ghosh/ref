@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen20"
+        tools:context=".screens.fragments.PaymentDetailSubTabFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen15"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/very_light_gray_border_round_20bg"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_12">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen10"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Payment Summary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Total Amount"
+                        android:textColor="@color/hint_text_gray" />
+
+                    <TextView
+                        android:id="@+id/totalTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="95,0000"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/hint_text_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Amount Paid"
+                        android:textColor="@color/hint_text_gray" />
+
+                    <TextView
+                        android:id="@+id/paidTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="75,0000"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/hint_text_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Due Amount"
+                        android:textColor="@color/hint_text_gray" />
+
+                    <TextView
+                        android:id="@+id/due_amountTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="20,0000"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@color/very_light_gray"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="100">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="50"-->
+<!--                        android:fontFamily="@font/outfit_medium"-->
+<!--                        android:text="Total"-->
+<!--                        android:textColor="@color/hint_text_gray" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="50"-->
+<!--                        android:fontFamily="@font/outfit_medium"-->
+<!--                        android:text="95,0000"-->
+<!--                        android:textAlignment="textEnd"-->
+<!--                        android:textColor="@color/hint_text_gray" />-->
+<!--                </LinearLayout>-->
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/paymentResponseBtnRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rejectTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen10"
+                    android:layout_toStartOf="@id/approveTV"
+                    android:background="@drawable/red_round_bg"
+                    android:fontFamily="@font/outfit_medium"
+                    android:paddingHorizontal="@dimen/dimen10"
+                    android:paddingVertical="@dimen/dimen5"
+                    android:text="Reject"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/approveTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/green_round_bg"
+                    android:fontFamily="@font/outfit_medium"
+                    android:paddingHorizontal="@dimen/dimen10"
+                    android:paddingVertical="@dimen/dimen5"
+                    android:text="Approve"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/very_light_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:paddingVertical="@dimen/dimen_12">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Proof of Payment" />
+                <TextView
+                    android:id="@+id/response_select_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/upload_payment_proofIV"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:textColor="@color/orange"
+                    android:text="select"/>
+
+                <ImageView
+                    android:id="@+id/upload_payment_proofIV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dimen16"
+                    android:src="@drawable/ic_upload_curved" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/no_proofTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F9F9FC"
+                android:fontFamily="@font/outfit_medium"
+                android:paddingVertical="@dimen/dimen20"
+                android:text="No Proof Available"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/upload_file_rv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen120"
+                android:layout_marginBottom="@dimen/dimen_12"
+                android:numColumns="3"
+                android:visibility="visible"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/upload_file_info" />
+            <TextView
+                android:id="@+id/resolve_see_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show more"
+                android:textColor="@color/orange"
+                android:layout_marginVertical="@dimen/dimen_12"
+                android:fontFamily="@font/outfit_regular"
+                android:layout_gravity="end"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen10"
+                android:layout_marginBottom="@dimen/dimen5"
+                android:visibility="gone"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Payment Instruction" />
+
+            <TextView
+                android:id="@+id/payment_instructionTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:background="@drawable/black_border_round_bg"
+                android:visibility="gone"
+                android:hint=""
+                android:minHeight="@dimen/dimen80"
+                android:gravity="top"
+                android:padding="@dimen/dimen5" />
+            <LinearLayout
+                android:id="@+id/transaction_infoLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen10"
+                android:layout_marginTop="@dimen/dimen15"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Transaction History"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/payment_infoRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/dimen20"
+                    android:paddingBottom="@dimen/dimen15"
+                    android:isScrollContainer="false"
+                    android:background="@drawable/gray_border_round_30dp"
+                    tools:listitem="@layout/payment_history_card"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

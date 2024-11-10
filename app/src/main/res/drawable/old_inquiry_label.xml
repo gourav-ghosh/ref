@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/custom_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:layout_width="60dp"
+        android:layout_height="20dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/faded_orange"/> <!-- Green color -->
+            <corners android:topLeftRadius="8dp"/>
+            <stroke android:color="@color/light_grey" android:width="1dp"></stroke>
+        </shape>
+    </item>
+    <item
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:gravity="end">
+        <rotate
+            android:fromDegrees="45"
+            android:pivotY="130%"
+            android:pivotX="80%">
+            <shape android:shape="rectangle">
+                <size android:height="@dimen/dimen20"
+                    android:width="@dimen/dimen20"></size>
+                <stroke android:color="@color/light_grey" android:width="1dp"></stroke>
+                <solid android:color="#FFFFFF"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

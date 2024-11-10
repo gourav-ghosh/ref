@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8"
+        app:cardElevation="@dimen/dimen_8"
+        android:id="@+id/card_view"
+        app:cardCornerRadius="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/orange_round_border_bg">
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_4"
+                android:background="@drawable/faded_orangefill_round_border_8bg"
+                android:orientation="horizontal"
+                android:weightSum="100">
+                <TextView
+                    android:id="@+id/followup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Follow up with Rajesh"
+                    android:textColor="@color/darker_Blue"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/outfit_medium"
+                    android:layout_marginStart="@dimen/dimen_12"
+                    android:layout_weight="50"
+                    />
+
+                <TextView
+                    android:id="@+id/created_date_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Created Date: 27th Oct'23 09:00 AM"
+                    android:textSize="@dimen/dimen10"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/darker_Blue"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="50"
+                    android:paddingRight="@dimen/dimen5"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/outfit_medium"
+                    android:layout_marginStart="@dimen/dimen_8"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_below="@+id/header">
+                <RelativeLayout
+                    android:id="@+id/task_info"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:paddingBottom="@dimen/dimen5"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/task_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Task :  Call lead and pitch price"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_medium"
+                        android:textSize="@dimen/dimen_12"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Due Date:"
+                            android:fontFamily="@font/outfit_medium"
+                            android:textSize="@dimen/dimen_12"
+                            android:layout_toLeftOf="@id/date_tv"
+                            />
+                        <TextView
+                            android:id="@+id/date_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="27th Oct'23"
+                            android:fontFamily="@font/outfit_medium"
+                            android:layout_marginStart="@dimen/dimen2"
+                            android:textSize="@dimen/dimen_12"
+                            android:layout_toLeftOf="@id/time_tv"
+                            />
+                        <TextView
+                            android:id="@+id/time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:00 AM"
+                            android:fontFamily="@font/outfit_medium"
+                            android:layout_alignParentRight="true"
+                            android:textSize="@dimen/dimen_12"
+                            android:layout_marginStart="@dimen/dimen_4"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:paddingLeft="@dimen/dimen5"
+                    android:paddingBottom="@dimen/dimen5"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/dimen5"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/header">
+                    <TextView
+                        android:id="@+id/lead_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:gravity="right"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_medium"
+                        android:textSize="@dimen/dimen_12"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_alignParentBottom="true">
+
+                        <ImageView
+                            android:id="@+id/edit_task"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="@dimen/dimen_8"
+                            android:src="@drawable/ic_edit_task"
+                            />
+
+                        <TextView
+                            android:id="@+id/task_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/black_round_bg"
+                            android:drawableRight="@drawable/ic_pencil"
+                            android:drawablePadding="@dimen/dimen_8"
+                            android:paddingHorizontal="@dimen/dimen_8"
+                            android:paddingVertical="2dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="Pending"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/color_strip"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/green_strip_bg"/>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

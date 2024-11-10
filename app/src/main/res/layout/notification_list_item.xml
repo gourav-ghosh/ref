@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/new_inquiry_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen3"
+        android:elevation="@dimen/dimen40"
+        app:cardCornerRadius="@dimen/dimen10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_lightgray_border"
+            android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/dimen_4"
+            android:layout_weight="80"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inquiry_number"
+                android:weightSum="100">
+
+                <ImageView
+                    android:id="@+id/tiles_iv"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:layout_weight="30"
+                    android:background="@drawable/white_round_10bg"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dimen_4">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/dimen_4"
+                        android:paddingVertical="@dimen/dimen_8">
+
+                        <TextView
+                            android:id="@+id/tile_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_8"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:text="Qty (Box)"
+                                    android:textColor="@color/gray"></TextView>
+
+                                <TextView
+                                    android:id="@+id/tiles_qty_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tile_detail"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:textColor="@color/black"></TextView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/inquiry_no_ll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_8"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tile_detail"
+                                    android:layout_marginStart="12dp"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:text="Inquiry no."
+                                    android:textColor="@color/gray"></TextView>
+
+                                <TextView
+                                    android:id="@+id/inquiry_number_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tile_detail"
+                                    android:layout_marginStart="12dp"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:textColor="@color/black"></TextView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/time_ago_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:layout_below="@id/availability_ll"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:gravity="end"
+                    android:text="time"
+                    android:textSize="@dimen/dimen_12"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

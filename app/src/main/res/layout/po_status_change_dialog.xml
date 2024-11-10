@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/faded_orange">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_semibold"
+            android:padding="@dimen/dimen_8"
+            android:text="Status of PO?"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/poStatusClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cross"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen20"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen16"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen15"
+            app:expandedHintEnabled="false"
+            android:hint="PO Name">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:fontFamily="@font/outfit_regular"
+                android:textSize="@dimen/dimen16"
+                android:text="PO #00000 AA (00000)"
+                android:inputType="none"
+                android:enabled="false"
+                android:textColor="@color/gray"
+                android:id="@+id/poNameET"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen16"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/outfit_medium"
+            android:text="@string/select_status_of_po"/>
+        <LinearLayout
+            android:id="@+id/statusReady"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dimen5">
+            <ImageView
+                android:id="@+id/statusReadyRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_unchecked_green_radio_button"
+                android:layout_marginEnd="@dimen/dimen15"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/dimen16"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/outfit_regular"
+                android:text="Ready"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/statusAgainstOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dimen15">
+            <ImageView
+                android:id="@+id/statusAgainstOrderRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_unchecked_green_radio_button"
+                android:layout_marginEnd="@dimen/dimen15"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/dimen16"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/outfit_regular"
+                android:text="Against Order"/>
+
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:id="@+id/expDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen24"
+            android:visibility="gone"
+            app:expandedHintEnabled="false"
+            android:hint="@string/exp_no_of_date_for_arrange">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="top|left"
+                android:fontFamily="@font/outfit_regular"
+                android:inputType="number"
+                android:textSize="@dimen/dimen16"
+                android:id="@+id/scheduleDate"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dimen16"
+            android:paddingHorizontal="@dimen/dimen16"
+            android:paddingVertical="@dimen/dimen_8">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/poStatusUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:background="@drawable/green_round_bg"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

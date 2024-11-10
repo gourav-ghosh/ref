@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/oldCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/dimen_4">
+
+            <RelativeLayout
+                android:id="@+id/oldRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_border_round_bg">
+
+                <View
+                    android:id="@+id/reschedule_history_color"
+                    android:layout_width="@dimen/dimen6"
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/red" />
+
+                <TextView
+                    android:id="@+id/reschedule_typeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/dimen10"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="old"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/reschedule_dateTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginVertical="@dimen/dimen10"
+                    android:layout_marginStart="@dimen/dimen20"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="1 Dec,2023, Second Half"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/update_on_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/oldCV"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/dimen5"
+            android:fontFamily="@font/outfit_medium"
+            android:text="Updated on 11 Dec,2023, 12:23 pm"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/dimen_8" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/update_on_TV"
+            android:hint="Reason for updation"
+            app:expandedHintEnabled="false">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/reasonET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_regular"
+                android:gravity="top"
+                android:maxHeight="@dimen/dimen100"
+                android:minHeight="@dimen/dimen40"
+                android:padding="@dimen/dimen10"
+                android:layout_marginBottom="@dimen/dimen10"
+                android:text="adsf"
+                android:textSize="@dimen/dimen14" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</layout>

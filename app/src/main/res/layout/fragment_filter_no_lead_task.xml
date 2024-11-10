@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen16"
+        tools:context=".filter.FilterNoLeadTaskFragment">
+
+        <ImageView
+            android:id="@+id/starred_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/orange_checkbox_unselected" />
+
+        <TextView
+            android:id="@+id/starred_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:fontFamily="@font/outfit_regular"
+            android:text="No Task Lead"
+            android:textColor="@color/darker_Blue"/>
+
+    </LinearLayout>
+</layout>

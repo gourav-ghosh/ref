@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".screens.DashboardActivity">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/my_drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#0D192F">
+
+                        <ImageView
+                            android:id="@+id/menu"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:src="@drawable/ic_menu" />
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_logo" />
+                        <RelativeLayout
+                            android:layout_width="@dimen/dimen50"
+                            android:layout_height="@dimen/dimen50"
+                            android:layout_gravity="end"
+                            android:id="@+id/noti_rl"
+                            android:layout_marginEnd="@dimen/dimen24">
+
+                            <ImageView
+                                android:id="@+id/bell"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_bell" />
+                            <TextView
+                                android:layout_width="@dimen/dimen25"
+                                android:layout_height="@dimen/dimen25"
+                                android:id="@+id/noti_count_tv"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:visibility="gone"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/notifi_count_bg"
+                                android:textColor="@color/white"/>
+
+
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <RelativeLayout
+                    android:id="@+id/bottombar_RL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_nav_bg"
+                    android:visibility="visible">
+
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/bottom_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@android:color/transparent"
+                        app:itemActiveIndicatorStyle="@drawable/tab_layout_bg"
+                        app:itemIconTint="@color/bottom_navigation_text_selector"
+                        app:itemTextColor="@color/bottom_navigation_text_selector"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/bottom_radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen5"
+                        android:paddingRight="@dimen/dimen5"
+                        android:paddingLeft="@dimen/dimen5"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb1"
+                            android:layout_width="@dimen/dimen_0"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen5"
+                            android:layout_marginRight="@dimen/dimen5"
+                            android:layout_weight="33"
+                            android:background="@drawable/tab_indicator_selector"
+                            android:button="@null"
+                            android:textColor="@color/white" />
+
+                        <RadioButton
+                            android:id="@+id/rb2"
+                            android:layout_width="@dimen/dimen_0"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen5"
+                            android:layout_marginRight="@dimen/dimen5"
+                            android:layout_weight="33"
+                            android:background="@drawable/tab_indicator_selector"
+                            android:button="@null"
+                            android:textColor="@color/white" />
+
+                        <RadioButton
+                            android:id="@+id/rb3"
+                            android:layout_width="@dimen/dimen_0"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen5"
+                            android:layout_marginRight="@dimen/dimen5"
+                            android:layout_weight="33"
+                            android:background="@drawable/tab_indicator_selector"
+                            android:button="@null"
+                            android:textColor="@color/white" />
+                    </RadioGroup>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navigation_view"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:headerLayout="@layout/profile_header"
+                android:background="@color/white"
+                app:itemBackground="@drawable/drawer_item_selection_bg">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen100">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/version_ll"
+                        android:id="@+id/menu_rv"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen40"
+                        android:id="@+id/version_ll"
+                        android:layout_alignParentBottom="true">
+                        <TextView
+                            android:id="@+id/version_name_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_medium"
+                            android:gravity="center"
+                            android:textSize="14dp"
+                            android:textColor="@color/gray"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.google.android.material.navigation.NavigationView>
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </LinearLayout>
+
+</layout>

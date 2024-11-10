@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dimen20"
+        tools:context=".screens.fragments.ComplaintStatusTabFragment">
+
+        <RelativeLayout
+            android:id="@+id/created_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/double_tickIV"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/dimen_12"
+                android:background="@drawable/light_green_round4bg"
+                android:padding="@dimen/dimen_8"
+                android:src="@drawable/ic_double_checks" />
+
+            <TextView
+                android:id="@+id/created_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/double_tickIV"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/createdby_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/created_text"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_toEndOf="@id/double_tickIV"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Created By : "
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/createdby_nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/createdby_text"
+                android:layout_toEndOf="@id/createdby_text"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/created_date_timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/createdby_text"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_toEndOf="@id/double_tickIV"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/customer_detail_updated_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/user_IV"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/dimen_12"
+                android:background="@drawable/light_green_round4bg"
+                android:padding="@dimen/dimen10"
+                android:src="@drawable/ic_border_user" />
+
+            <TextView
+                android:id="@+id/customer_detail_updated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/user_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/processby_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/customer_detail_updated"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_toEndOf="@id/user_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Processed By : "
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/processedby_nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/processby_text"
+                android:layout_toEndOf="@id/processby_text"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/process_date_timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/processby_text"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_toEndOf="@id/user_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/date_changed_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/resolution_IV"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/dimen_12"
+                android:background="@drawable/light_green_round4bg"
+                android:padding="@dimen/dimen_8"
+                android:src="@drawable/ic_notepad" />
+
+            <TextView
+                android:id="@+id/resolution_date_changed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/resolution_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/res_processby_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/resolution_date_changed_text"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_toEndOf="@id/resolution_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Processed By : "
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/res_processedby_nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/res_processby_text"
+                android:layout_toEndOf="@id/res_processby_text"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/res_date_timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/res_processby_text"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_toEndOf="@id/resolution_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/inprogress_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/inprogress_IV"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/dimen_12"
+                android:background="@drawable/grayish_round_4bg"
+                android:padding="@dimen/dimen_8"
+                android:src="@drawable/ic_maptrifold"
+                app:tint="@color/gray" />
+
+            <TextView
+                android:id="@+id/inprogress_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/inprogress_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/inprogress_processby_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inprogress_text"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_toEndOf="@id/inprogress_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Processed By : "
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/inprogress_processedby_nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/inprogress_processby_text"
+                android:layout_toEndOf="@id/inprogress_processby_text"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/inprogress_date_timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inprogress_processby_text"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_toEndOf="@id/inprogress_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/reolved_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/resolved_IV"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/dimen_12"
+                android:background="@drawable/light_green_round4bg"
+                android:padding="@dimen/dimen_8"
+                android:src="@drawable/ic_checkcircle" />
+
+            <TextView
+                android:id="@+id/resolved_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/resolved_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/resolved_processby_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/resolved_text"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_toEndOf="@id/resolved_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Processed By : "
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/resolved_processedby_nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/resolved_processby_text"
+                android:layout_toEndOf="@id/resolved_processby_text"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_12" />
+
+            <TextView
+                android:id="@+id/resolved_date_timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/resolved_processby_text"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_toEndOf="@id/resolved_IV"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_12" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

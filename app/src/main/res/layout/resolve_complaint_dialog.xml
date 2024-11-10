@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen10">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_12">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen16"
+                android:text="Resolve Complaint"
+                android:fontFamily="@font/outfit_medium"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/resolve_dialog_crossIV"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_cross"
+                android:padding="@dimen/dimen5"
+                android:layout_alignParentEnd="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/solution"
+                    app:expandedHintEnabled="false"
+                    android:visibility="visible"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    app:endIconDrawable="@drawable/ic_dropdown">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/solution"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/dimen_12"
+                        android:paddingVertical="@dimen/dimen6"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="none"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/other_solutionLayout"
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/dimen10"
+                    app:expandedHintEnabled="false"
+                    android:hint="@string/other_solution"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/other_solutionET"
+                        android:textSize="@dimen/dimen15"
+                        android:paddingVertical="@dimen/dimen6"
+                        android:fontFamily="@font/outfit_regular"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/dimen10"
+                    app:expandedHintEnabled="false"
+                    android:hint="Cost to Mytyles">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/cost_to_mytylesET"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:digits="1234567890"
+                        android:textSize="@dimen/dimen15"
+                        android:paddingVertical="@dimen/dimen6"
+                        android:fontFamily="@font/outfit_regular"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen10"
+                    app:expandedHintEnabled="false"
+                    android:hint="@string/comment">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/commentET"
+                        android:paddingVertical="@dimen/dimen_8"
+                        android:gravity="top"
+                        android:minHeight="@dimen/dimen80"
+                        android:fontFamily="@font/outfit_regular"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/gray_dotted_round5_border"
+                        android:paddingHorizontal="@dimen/dimen_12"
+                        android:layout_marginTop="@dimen/dimen20">
+
+                        <ImageView
+                            android:id="@+id/img_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen16"
+                            android:src="@drawable/ic_cloud_upload"
+                            app:tint="@color/orange" />
+
+                        <TextView
+                            android:id="@+id/resolve_dialog_select_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_iv"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/outfit_medium"
+                            android:padding="@dimen/dimen_12"
+                            android:text="@string/select_image_to_upload" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/resolve_dialog_select_img"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="@string/upload_image_format" />
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen6"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/white"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:text="Resolution Proof"
+                        android:textSize="@dimen/dimen_12" />
+                </RelativeLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/resolve_upload_img_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="3"
+                        android:maxLength="1"
+                        tools:listitem="@layout/upload_file_info"/>
+                <TextView
+                    android:id="@+id/resolveBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/green_round_bg"
+                    android:text="Confirm"
+                    android:layout_marginTop="@dimen/dimen10"
+                    android:textColor="@color/white"
+                    android:paddingHorizontal="@dimen/dimen16"
+                    android:paddingVertical="@dimen/dimen6"
+                    android:layout_gravity="end"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

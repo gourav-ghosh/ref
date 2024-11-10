@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen10">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_12">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen16"
+                android:text="Process Complaint"
+                android:fontFamily="@font/outfit_medium"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/process_crossIV"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_cross"
+                android:padding="@dimen/dimen5"
+                android:layout_alignParentEnd="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/issue_from"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12" />
+                <RadioGroup
+                    android:id="@+id/rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/dimen_8"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    android:background="@color/white">
+
+                <RadioButton
+                    android:id="@+id/mytyles_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:background="@drawable/orange_gray_fill_selector"
+                    android:button="@null"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:paddingVertical="@dimen/dimen5"
+                    android:paddingHorizontal="@dimen/dimen_12"
+                    android:text="MYTYLES"
+                    android:textSize="@dimen/dimen16"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/white"/>
+
+
+                <RadioButton
+                    android:id="@+id/vendor_rb"
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/orange_gray_fill_selector"
+                    android:button="@null"
+                    android:paddingVertical="@dimen/dimen5"
+                    android:paddingHorizontal="@dimen/dimen_12"
+                    android:text="Vendor"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textSize="@dimen/dimen16"
+                    android:textColor="@color/white"/>
+                </RadioGroup>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/agentInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginVertical="@dimen/dimen_12"
+                    android:hint="@string/assign_agent"
+                    app:expandedHintEnabled="false"
+                    android:visibility="gone"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    app:endIconDrawable="@drawable/ic_dropdown">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/agent_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/dimen_12"
+                        android:paddingVertical="@dimen/dimen6"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="none"/>
+
+                </com.google.android.material.textfield.TextInputLayout>                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/vendor_name_Layout"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    android:hint="Vendor Name"
+                    android:layout_marginVertical="@dimen/dimen_12"
+                    app:expandedHintEnabled="false">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/vendor_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:fontFamily="@font/outfit_medium"
+                        android:textSize="@dimen/dimen_12"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/dimen_4" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/processBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/green_round_bg"
+                    android:text="Confirm"
+                    android:textColor="@color/white"
+                    android:paddingHorizontal="@dimen/dimen16"
+                    android:paddingVertical="@dimen/dimen6"
+                    android:layout_gravity="end"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

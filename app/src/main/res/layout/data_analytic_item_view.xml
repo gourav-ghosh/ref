@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvSerialNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            tools:text="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:textSize="12sp"
+            android:id="@+id/sale_executive"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/orange"
+            tools:text="Nilesh Kumar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:id="@+id/orders"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            tools:text="4" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:id="@+id/total_amount"
+            android:textSize="12sp"
+            android:gravity="left"
+            tools:text="8.11k" />
+    </LinearLayout>
+</layout>

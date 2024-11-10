@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".screens.BillingAddressActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0D192F">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/white" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/dimen10">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:expandedHintEnabled="false"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/enter_address_line_1I">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/address1ET"
+                        android:maxLines="3"
+                        android:fontFamily="@font/outfit_regular"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:expandedHintEnabled="false"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/enter_address_line_2I">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/address2ET"
+                        android:maxLines="3"
+                        android:fontFamily="@font/outfit_regular"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/select_stateI"
+                    app:expandedHintEnabled="false"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    app:endIconDrawable="@android:color/transparent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/select_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="none"
+                        android:fontFamily="@font/outfit_regular"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/select_cityI"
+                    app:expandedHintEnabled="false"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    app:endIconDrawable="@android:color/transparent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/select_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="none"
+                        android:fontFamily="@font/outfit_regular"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    app:expandedHintEnabled="false"
+                    android:hint="@string/enter_zipcodeI">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/zipcodeET"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:fontFamily="@font/outfit_regular"
+                        android:layout_height="match_parent" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    app:expandedHintEnabled="false"
+                    android:id="@+id/landmark_tl"
+                    android:visibility="gone"
+                    android:hint="Landmark">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/landmark_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLength="15"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    app:expandedHintEnabled="false"
+                    android:hint="@string/enter_gstI">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/enter_gst"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLength="15"
+                        android:fontFamily="@font/outfit_regular"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    app:expandedHintEnabled="false"
+                    android:visibility="gone"
+                    android:id="@+id/siteinchargemob_tl"
+                    android:hint="@string/siteinchargemob_txt">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/siteinchargemob_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLength="10"
+                        android:inputType="number"
+                        android:digits="0123456789" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/dimen10">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="start"
+                    android:background="@drawable/black_border_round_bg"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darker_Blue" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:background="@drawable/orange_round_bg"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

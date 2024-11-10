@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/dimen20">
+
+    <TextView
+        android:id="@+id/title_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen16"
+        android:fontFamily="@font/outfit_semibold"/>
+    <TextView
+        android:id="@+id/count_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen15"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/outfit_regular"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mediaRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen10"
+        tools:listitem="@layout/upload_file_info"
+        android:layout_below="@id/title_TV"/>
+    <TextView
+        android:id="@+id/dialog_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/outfit_regular"
+        android:paddingHorizontal="@dimen/dimen20"
+        android:paddingVertical="@dimen/dimen6"
+        android:text="Cancel"
+        android:layout_below="@id/mediaRV"
+        android:layout_toStartOf="@id/dialog_delete_btn"
+        android:layout_marginEnd="@dimen/dimen20"
+        android:textColor="@color/orange" />
+    <TextView
+        android:id="@+id/dialog_delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/light_red_round_bg"
+        android:fontFamily="@font/outfit_regular"
+        android:paddingHorizontal="@dimen/dimen20"
+        android:paddingVertical="@dimen/dimen6"
+        android:text="Delete"
+        android:layout_below="@id/mediaRV"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/red" />
+
+</RelativeLayout>

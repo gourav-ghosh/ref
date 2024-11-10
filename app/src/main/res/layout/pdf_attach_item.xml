@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginVertical="@dimen/dimen_8"
+        app:cardCornerRadius="@dimen/dimen5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_grayish_border_5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/poStatus"
+                android:layout_width="@dimen/dimen_12"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:background="@color/red" />
+
+            <View
+                android:id="@+id/pdf_icon"
+                android:layout_width="@dimen/dimen_12"
+                android:layout_height="@dimen/dimen16"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/poStatus"
+                android:layout_marginStart="@dimen/dimen10"
+                android:layout_marginEnd="@dimen/dimen10"
+                android:background="@drawable/ic_pdf_img" />
+
+            <TextView
+                android:id="@+id/pdf_nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/pdf_icon"
+                android:layout_toStartOf="@id/action_options"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="pO_# 03698 FT (02510).pdfpO_# 03698 FT (02510).pdfpO_# 03698 FT (02510).pdf" />
+
+            <LinearLayout
+                android:id="@+id/action_options"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen10"
+                android:gravity="center_vertical"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:id="@+id/statusIV"
+                    android:layout_width="@dimen/dimen25"
+                    android:layout_height="@dimen/dimen25"
+                    android:src="@drawable/ic_po_status"
+                    android:layout_marginEnd="@dimen/dimen15"
+                    android:visibility="gone"
+                    app:tint="@color/colorPrimary" />
+                <ImageView
+                    android:id="@+id/markPOArrangeIV"
+                    android:layout_width="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen20"
+                    android:src="@drawable/po_arranged_check"
+                    android:layout_marginEnd="@dimen/dimen15"
+                    android:visibility="gone"
+                    app:tint="@color/green"/>
+                <ImageView
+                    android:id="@+id/mail_iv"
+                    android:layout_width="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen20"
+                    android:src="@drawable/ic_mail"
+                    android:layout_marginEnd="@dimen/dimen15"
+                    android:visibility="gone"
+                    app:tint="@color/gray" />
+                <ImageView
+                    android:id="@+id/downloadIV"
+                    android:layout_width="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen20"
+                    android:src="@drawable/ic_download"
+                    android:visibility="visible"
+                    android:layout_marginEnd="@dimen/dimen15"
+                    />
+                <ImageView
+                    android:id="@+id/view_pdfIV"
+                    android:layout_width="@dimen/dimen25"
+                    android:layout_height="@dimen/dimen25"
+                    android:src="@drawable/ic_eye_border"
+                    android:layout_marginEnd="@dimen/dimen10"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".screens.complaintFIlter.ComplaintFilterActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/three_side_orange_roundborder_lightgray_fill_bg">
+
+            <ImageView
+                android:id="@+id/close_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="16dp"
+                android:src="@drawable/ic_cross"></ImageView>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/close_filter"
+                android:layout_marginStart="@dimen/dimen_8"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:layout_marginBottom="@dimen/dimen_8"
+                android:background="@drawable/ic_filter"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/close_filter"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_toRightOf="@id/view"
+                android:fontFamily="@font/outfit_medium"
+                android:paddingVertical="@dimen/dimen_4"
+                android:text="Filter"></TextView>
+
+            <TextView
+                android:id="@+id/clear_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/close_filter"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:layout_toLeftOf="@id/apply_filter"
+                android:fontFamily="@font/outfit_medium"
+                android:paddingHorizontal="@dimen/dimen_12"
+                android:paddingVertical="@dimen/dimen_4"
+                android:text="Clear All"
+                android:textColor="@color/orange"></TextView>
+
+            <TextView
+                android:id="@+id/apply_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/close_filter"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:background="@drawable/black_round_bg"
+                android:fontFamily="@font/outfit_medium"
+                android:paddingHorizontal="@dimen/dimen_12"
+                android:paddingVertical="@dimen/dimen_4"
+                android:text="Apply"
+                android:textColor="@color/white"></TextView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="35"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_8">
+
+                <RadioGroup
+                    android:id="@+id/filter_radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <RadioButton
+                        android:id="@+id/analyticDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/orange_white_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/outfit_medium"
+                        android:padding="@dimen/dimen_8"
+                        android:text="Date"
+                        android:textColor="@color/orange_gray_selector" />
+
+                    <RadioButton
+                        android:id="@+id/role"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/orange_white_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/outfit_medium"
+                        android:padding="@dimen/dimen_8"
+                        android:text="Role"
+                        android:textColor="@color/orange_gray_selector" />
+
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/analytic_filter_frag_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="65"
+                android:background="@color/light_grey"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen24" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

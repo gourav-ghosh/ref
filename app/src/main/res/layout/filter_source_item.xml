@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen16">
+
+        <ImageView
+            android:id="@+id/filter_source_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/orange_checkbox_unselected" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:fontFamily="@font/outfit_regular"
+            android:text="Lead Source"
+            android:textColor="@color/darker_Blue"/>
+
+
+    </LinearLayout>
+</layout>

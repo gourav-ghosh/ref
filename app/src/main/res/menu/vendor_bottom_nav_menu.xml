@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        />
+    <item
+        android:id="@+id/nav_leads"
+        android:title="Manage Users"
+        android:icon="@drawable/ic_manageleads"/>
+    <item
+        android:id="@+id/nav_orders"
+        android:title="Manage Inquiries"
+        android:icon="@drawable/ic_manageorders"/>
+</menu>

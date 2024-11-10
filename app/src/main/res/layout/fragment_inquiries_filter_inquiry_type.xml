@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.vendor.fragment.InquiriesFilterInquiryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_8"
+            android:fontFamily="@font/outfit_medium"
+            android:text="Inquiry Type"
+            android:textColor="@color/gray"
+            android:textStyle="bold" />
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/inquiry_type_filter_spinnerView"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_round_4bg"
+            android:fontFamily="@font/outfit_regular"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:paddingVertical="@dimen/dimen_4"
+            android:textColor="@color/darker_Blue"
+            android:textColorHint="@color/gray"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_tint="@color/gray"
+            app:spinner_dismiss_notified_select="true"
+            app:spinner_divider_color="@color/white"
+            app:spinner_divider_show="true"
+            app:spinner_item_array="@array/InquiryTypeList" />
+    </LinearLayout>
+
+</layout>

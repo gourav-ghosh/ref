@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingHorizontal="@dimen/dimen_12"
+    android:paddingVertical="@dimen/dimen20">
+
+    <TextView
+        android:id="@+id/dialogTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/outfit_regular"
+        android:maxLines="1"
+        android:text="Architect Self Reg. Link"
+        android:textSize="@dimen/dimen16"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/close_dialog"
+        android:layout_width="@dimen/dimen20"
+        android:layout_height="@dimen/dimen20"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/dimen3"
+        android:src="@drawable/ic_cross" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogTitleTv"
+        android:layout_marginTop="@dimen/dimen10"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/saleExeInput"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            android:hint="@string/sales_exec"
+            app:endIconDrawable="@drawable/ic_dropdown"
+            app:expandedHintEnabled="false">
+
+            <AutoCompleteTextView
+                android:id="@+id/dialog_sale_exe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/outfit_regular"
+                android:textColor="@color/black"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:id="@+id/dialog_link_viewLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"
+            android:layout_marginVertical="@dimen/dimen10"
+            android:background="@drawable/gray_border_round4dp"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/dialog_link_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:padding="@dimen/dimen20"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/sea_blue"
+                android:textSize="@dimen/dimen_12" />
+
+            <ImageView
+                android:id="@+id/dialog_copy_link"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:layout_weight="10"
+                android:padding="@dimen/dimen5"
+                android:src="@drawable/ic_gray_copy" />
+
+            <ImageView
+                android:id="@+id/dialog_link_share_whatsapp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:layout_toStartOf="@id/copy_link"
+                android:layout_weight="10"
+                android:padding="@dimen/dimen3"
+                android:src="@drawable/ic_whatsapp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dialog_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen5"
+            android:textColor="@color/orange"
+            android:visibility="gone"
+            android:text="Share this link to add architect copy link or share it on what's app." />
+    </LinearLayout>
+
+</RelativeLayout>

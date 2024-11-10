@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dimen10"
+        android:paddingBottom="@dimen/dimen10"
+        tools:context=".screens.vendor.ManageUserFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen16"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen50"
+                android:layout_weight="3"
+                android:background="@drawable/black_border_round_bg"
+                android:paddingLeft="@dimen/dimen10"
+                android:paddingRight="@dimen/dimen10">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/searchET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/outfit_regular"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/ic_search"
+                    android:hint="Search by name, email, number..."
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen50"
+                android:layout_height="@dimen/dimen50"
+                android:layout_marginLeft="@dimen/dimen5"
+                android:background="@drawable/export_bg"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/export_iv"
+                    android:layout_width="@dimen/dimen40"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_export" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/filter_iv"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="@dimen/dimen5"
+                android:src="@drawable/ic_filter" />
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/no_user_record_tv"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/no_user_record"
+                    android:textSize="20sp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/gray"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/userList_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/add_lead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:layout_marginBottom="@dimen/dimen_12"
+                    android:elevation="@dimen/dimen_48"
+                    android:src="@drawable/ic_add" />
+
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+</layout>

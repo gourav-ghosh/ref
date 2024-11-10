@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#66728A</color>
+    <color name="red">#F72C1D</color>
+    <color name="light_orange">#F9B96B</color>
+    <color name="light_grey">#EEF3F8</color>
+    <color name="orange">#F7941D</color>
+    <color name="faded_orange">#FFEFDD</color>
+    <color name="darker_Blue">#0D1B2A</color>
+    <color name="green">#3B9321</color>
+    <color name="gray2">#66728A</color>
+    <color name="accent">#1B263B</color>
+    <color name="darkGreen">#3B9321</color>
+    <color name="lightBlue">#E3F0FE</color>
+    <color name="baby_pink">#FFEAE9</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_green">#D6FFCA</color>
+
+
+    <color name="colorPrimary">#F9B96B</color>
+    <color name="colorPrimaryDark">#F9B96B</color>
+    <color name="colorAccent">#66728A</color>
+    <color name="divider">#9E9E9E</color>
+    <color name="sea_blue">#5286E8</color>
+    <color name="vw_BgToolBar">#373B3E</color>
+    <color name="vw_BgRv">#191919</color>
+    <color name="vw_BgItem">#353535</color>
+
+    <color name="vw_ShadowItem">#94333232</color>
+
+    <color name="vw_BgRvFileDivider">#EEEEEE</color>
+    <color name="grayish">#D3DEE9</color>
+    <color name="light_brown">#F9B96B</color>
+    <color name="brown">#C96E00</color>
+    <color name="mint_green">#8DD3BB</color>
+    <color name="hint_text_gray">#858D9D</color>
+    <color name="very_light_gray">#F2F2F2</color>
+    <color name="grass_green">#D2E2CB</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="openstatus_color">#F72C1D</color>
+    <color name="draftstatus_color">#1B263B</color>
+    <color name="convertedstatus_color">#3B9321</color>
+    <color name="very_light_orange">#FFEFDD</color>
+    <color name="data_an_tab_color">#F7DDBF</color>
+    <color name="very_light_bluish">#F4F9FF</color>
+
+</resources>

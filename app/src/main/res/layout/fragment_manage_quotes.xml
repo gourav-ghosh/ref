@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen10"
+            tools:context=".screens.fragments.ManageQuotesFragment">
+
+            <TextView
+                android:id="@+id/lead_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_regular"
+                android:paddingVertical="@dimen/dimen_8"
+                android:text="@string/manage_quotes"
+                android:textAllCaps="false"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dimen16">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:layout_height="@dimen/dimen50"
+                    android:paddingRight="@dimen/dimen10"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:orientation="horizontal"
+                    android:background="@drawable/black_border_round_bg">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:drawableRight="@drawable/ic_search"
+                        android:id="@+id/searchET"
+                        android:fontFamily="@font/outfit_regular"
+                        android:hint="Search"
+                        android:imeOptions="actionSearch"
+                        android:singleLine="true"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="@dimen/dimen50"
+                    android:layout_height="@dimen/dimen50"
+                    android:layout_marginLeft="@dimen/dimen5"
+                    android:background="@drawable/export_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/export_iv"
+                        android:layout_width="@dimen/dimen40"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_export" />
+                </LinearLayout>
+            </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/inquiry_rb_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/quotation_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Quotations"
+                    android:textAlignment="center"
+                    android:button="@null"
+                    android:fontFamily="@font/outfit_regular"
+                    android:textSize="@dimen/dimen_12"
+                    android:padding="@dimen/dimen5"
+                    android:textColor="@color/black_white_selector"
+                    android:background="@drawable/orangefill_blackborder_selector"/>
+                <RadioButton
+                    android:id="@+id/order_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Orders"
+                    android:textAlignment="center"
+                    android:button="@null"
+                    android:textSize="@dimen/dimen_12"
+                    android:fontFamily="@font/outfit_regular"
+                    android:padding="@dimen/dimen5"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:layout_marginRight="@dimen/dimen10"
+                    android:textColor="@color/black_white_selector"
+                    android:background="@drawable/orangefill_blackborder_selector"/>
+            </RadioGroup>
+
+           <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/refresh_ll">
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+                   <TextView
+                       android:id="@+id/no_quote_record_tv"
+                       android:layout_width="wrap_content"
+                       android:visibility="gone"
+                       android:text="@string/no_quote_record"
+                       android:textSize="20sp"
+                       android:layout_centerInParent="true"
+                       android:layout_marginLeft="@dimen/dimen10"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/outfit_medium"
+                       android:textColor="@color/gray"/>
+                   <androidx.recyclerview.widget.RecyclerView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:layout_marginTop="@dimen/dimen10"
+                       android:id="@+id/mqRV" />
+               </RelativeLayout>
+           </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/add_quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dimen_12"
+            android:elevation="@dimen/dimen_48"
+            android:src="@drawable/ic_add"/>
+
+    </RelativeLayout>
+</layout>

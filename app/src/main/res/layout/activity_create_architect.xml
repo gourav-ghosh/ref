@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".screens.CreateArchitectActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0D192F">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Create Architect / Interior"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen16" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen16">
+                <RelativeLayout
+                    android:id="@+id/profileDetailsRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Profile Details"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/black" />
+                    <ImageView
+                        android:id="@+id/delete_arch_iv"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/dimen_12"
+                        android:background="@drawable/faded_orange_fill_circle"
+                        android:padding="@dimen/dimen_8"
+                        android:layout_toStartOf="@id/edit_arch_iv"
+                        android:src="@drawable/ic_delete"
+                        app:tint="@color/orange" />
+                    <ImageView
+                        android:id="@+id/edit_arch_iv"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/dimen_12"
+                        android:background="@drawable/faded_orange_fill_circle"
+                        android:padding="@dimen/dimen_8"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_border_pencil"
+                        app:tint="@color/orange" />
+                    <LinearLayout
+                        android:id="@+id/profile_pic_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/edit_arch_iv"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/profile_bg"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="@dimen/dimen10" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/nameTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/dimen10"
+                                android:fontFamily="@font/outfit_regular"
+                                android:text="name" />
+
+                            <ImageView
+                                android:id="@+id/whatsappIV"
+                                android:layout_width="@dimen/dimen15"
+                                android:layout_height="@dimen/dimen15"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/dimen10"
+                                android:src="@drawable/ic_whatsapp_green_border" />
+
+                            <ImageView
+                                android:id="@+id/callIV"
+                                android:layout_width="@dimen/dimen15"
+                                android:layout_height="@dimen/dimen15"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_phone_call" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/architectOrdersRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/total_orderTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/profile_pic_ll"
+                            android:fontFamily="@font/outfit_semibold"
+                            android:text="Total Orders"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/order_countTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/total_orderTxt"
+                            android:fontFamily="@font/outfit_semibold"
+                            android:text="00"
+                            android:textColor="@color/green" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/showOrdersByArchitect"
+                        android:layout_width="@dimen/dimen20"
+                        android:layout_height="@dimen/dimen20"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/ic_eye_border_orange" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/personalDetailsRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="Personal Details"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black" />
+                    <ImageView
+                        android:id="@+id/share_arch_iv"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/dimen_12"
+                        android:background="@drawable/faded_orange_fill_circle"
+                        android:padding="@dimen/dimen_8"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_share" />
+                </RelativeLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/firstName"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/firstNameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/last_name"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/lastNameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/outfit_regular" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/customer_mobile_num"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/customerMobileNumET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="number"
+                        android:maxLength="10" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/alternate_num"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/alternateMobileNumET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="number"
+                        android:maxLength="10" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="Email ID"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/emailET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/req_dropdown"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/select_sale_exe"
+                    app:endIconMode="none"
+                    android:visibility="gone"
+                    app:expandedHintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/sale_exe"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:drawableRight="@drawable/ic_dropdown"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen16"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="Company Details"
+                    android:textColor="@color/darker_Blue"
+                    android:textSize="@dimen/dimen16" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="@string/company_name"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/companyNameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/outfit_regular" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="Brand Name (If Different)"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/brand_nameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/outfit_regular" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="Address"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/addressET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="3" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dimen_4"
+                        android:layout_marginEnd="@dimen/dimen10"
+                        android:layout_weight="50"
+                        android:hint="@string/city_mandatory"
+                        app:endIconDrawable="@drawable/ic_dropdown"
+                        app:expandedHintEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/cityET"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/outfit_regular"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dimen_4"
+                        android:layout_weight="50"
+                        android:hint="State"
+                        app:endIconDrawable="@drawable/ic_dropdown"
+                        app:expandedHintEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/stateET"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/outfit_regular"
+                            android:maxLines="1"
+                            android:singleLine="true"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dimen_4"
+                        android:layout_marginEnd="@dimen/dimen10"
+                        android:layout_weight="50"
+                        android:background="@color/light_grey"
+                        android:hint="Country"
+                        app:endIconDrawable="@drawable/ic_dropdown"
+                        app:expandedHintEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/countryET"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:editable="false"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/outfit_regular"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="India"
+                            android:textColor="@color/hint_text_gray" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dimen_4"
+                        android:layout_weight="50"
+                        android:hint="Pin Code"
+                        app:expandedHintEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/pincodeET"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="number"
+                            android:maxLength="6" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="GST (If Any)"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/enter_gst"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLength="15" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="Established In Year"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/established_YearET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLength="15" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/upload_image_RL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen6"
+                    android:layout_marginTop="@dimen/dimen_4">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@drawable/faded_orangefill_orange_dotted_round5_border"
+                        android:paddingHorizontal="@dimen/dimen_12"
+                        android:layout_marginTop="@dimen/dimen20">
+
+                        <ImageView
+                            android:id="@+id/img_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen16"
+                            android:src="@drawable/ic_cloud_upload"
+                            app:tint="@color/orange" />
+
+                        <TextView
+                            android:id="@+id/select_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_iv"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/outfit_medium"
+                            android:padding="@dimen/dimen_12"
+                            android:text="@string/select_image_to_upload" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/select_img"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="@string/png_jpeg" />
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen6"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/white"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:text="Visiting Card/ Company Letterhead"
+                        android:textSize="@dimen/dimen_12" />
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/architect_letterhead_img_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:numColumns="3"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/dimen6"
+                    tools:listitem="@layout/upload_file_info"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/upload_architect_letterhead_img_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen6"
+                    android:numColumns="3"
+                    tools:listitem="@layout/uploaded_item"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/save"
+                        android:layout_width="@dimen/dimen100"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="@dimen/dimen_12"
+                        android:background="@drawable/btn_selector"
+                        android:fontFamily="@font/outfit_semibold"
+                        android:text="Register"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

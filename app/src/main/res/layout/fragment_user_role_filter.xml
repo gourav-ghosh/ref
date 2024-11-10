@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.vendor.fragment.UserRoleFilterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:id="@+id/user_role_filter_spinnerView"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_round_4bg"
+            android:fontFamily="@font/outfit_regular"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:paddingVertical="@dimen/dimen_4"
+            android:hint="Select Role"
+            android:textColor="@color/darker_Blue"
+            android:textColorHint="@color/gray"
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_tint="@color/gray"
+            app:spinner_dismiss_notified_select="true"
+            app:spinner_divider_color="@color/white"
+            app:spinner_divider_show="true"/>
+    </LinearLayout>
+
+
+</layout>

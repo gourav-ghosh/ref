@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/details_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen10"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sale_exe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_12"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/sale_exeTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sale_exe"
+                    android:layout_marginHorizontal="@dimen/dimen_12"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/sale_exeTV"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+                <ImageView
+                    android:id="@+id/sale_call_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen24"
+                    android:padding="@dimen/dimen_4"
+                    android:src="@drawable/ic_phone_call" />
+
+                <ImageView
+                    android:id="@+id/sale_whatsapp_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen16"
+                    android:layout_toStartOf="@id/sale_call_iv"
+                    android:padding="@dimen/dimen3"
+                    android:src="@drawable/ic_whatsapp_green_border" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_12"
+                    android:drawableEnd="@drawable/ic_attach_link"
+                    android:drawablePadding="@dimen/dimen20"
+                    android:drawableTint="@color/orange"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Instruction"
+                    android:textColor="@color/hint_text_gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/instructionTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/instruction"
+                    android:layout_marginHorizontal="@dimen/dimen_12"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/instructionTV"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pdf_RV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/pdf_attach_item" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginVertical="@dimen/dimen5"/>
+
+    </LinearLayout>
+
+</layout>

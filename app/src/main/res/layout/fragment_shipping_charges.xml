@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Shipping Charge"
+                android:textColor="@color/black" />
+            <ImageView
+                android:id="@+id/shipping_exportIV"
+                android:layout_width="@dimen/dimen32"
+                android:layout_height="@dimen/dimen32"
+                android:layout_toStartOf="@id/shipping_filterIV"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:src="@drawable/ic_import_full" />
+            <ImageView
+                android:id="@+id/shipping_filterIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_filter" />
+        </RelativeLayout> -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".screens.fragments.ShippingChargesFragment">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Shipping Charge"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/shipping_addIV"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="@dimen/dimen15"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_add" />
+                    <ImageView
+                        android:id="@+id/shipping_exportIV"
+                        android:layout_width="@dimen/dimen32"
+                        android:layout_height="@dimen/dimen32"
+                        android:layout_marginEnd="@dimen/dimen_8"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_import_full"/>
+                    <ImageView
+                        android:id="@+id/shipping_filterIV"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_filter" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen40"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:background="@drawable/black_border_round_bg"
+                android:paddingHorizontal="@dimen/dimen_12">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/searchET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/ic_search"
+                    android:fontFamily="@font/outfit_regular"
+                    android:hint="Search"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shipping_tab_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:paddingHorizontal="@dimen/dimen_12"
+                android:visibility="visible"
+                tools:listitem="@layout/shipping_status_item" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:paddingHorizontal="@dimen/dimen_12"
+                android:scrollbars="none"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/all_count_scTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/all_sc_tab"
+                            android:layout_marginEnd="-5dp"
+                            android:background="@drawable/black_round_bg"
+                            android:elevation="@dimen/dimen5"
+                            android:fontFamily="@font/outfit_medium"
+                            android:paddingHorizontal="@dimen/dimen_12"
+                            android:paddingVertical="@dimen/dimen2"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_8" />
+
+                        <TextView
+                            android:id="@+id/all_sc_tab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen5"
+                            android:layout_marginTop="@dimen/dimen5"
+                            android:layout_marginEnd="@dimen/dimen5"
+                            android:layout_marginBottom="@dimen/dimen5"
+                            android:background="@drawable/blackfill_blackborder_selector"
+                            android:paddingHorizontal="@dimen/dimen16"
+                            android:paddingVertical="@dimen/dimen_8"
+                            android:text="All"
+                            android:textColor="@color/black_white_selector" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/pending_count_scTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/pending_sc_tab"
+                            android:layout_marginEnd="-5dp"
+                            android:background="@drawable/dark_grey_round_bg"
+                            android:elevation="@dimen/dimen5"
+                            android:fontFamily="@font/outfit_medium"
+                            android:paddingHorizontal="@dimen/dimen_12"
+                            android:paddingVertical="@dimen/dimen2"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_8" />
+
+                        <TextView
+                            android:id="@+id/pending_sc_tab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen5"
+                            android:layout_marginTop="@dimen/dimen5"
+                            android:layout_marginEnd="@dimen/dimen5"
+                            android:layout_marginBottom="@dimen/dimen5"
+                            android:background="@drawable/blackfill_blackborder_selector"
+                            android:paddingHorizontal="@dimen/dimen16"
+                            android:paddingVertical="@dimen/dimen_8"
+                            android:text="Requested"
+                            android:textColor="@color/black_white_selector" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/approved_count_scTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/approve_sc_tab"
+                            android:layout_marginEnd="-5dp"
+                            android:background="@drawable/orange_round_bg"
+                            android:elevation="@dimen/dimen5"
+                            android:fontFamily="@font/outfit_medium"
+                            android:paddingHorizontal="@dimen/dimen_12"
+                            android:paddingVertical="@dimen/dimen2"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_8" />
+
+                        <TextView
+                            android:id="@+id/approve_sc_tab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen5"
+                            android:layout_marginTop="@dimen/dimen5"
+                            android:layout_marginEnd="@dimen/dimen5"
+                            android:layout_marginBottom="@dimen/dimen5"
+                            android:background="@drawable/blackfill_blackborder_selector"
+                            android:paddingHorizontal="@dimen/dimen16"
+                            android:paddingVertical="@dimen/dimen_8"
+                            android:text="Approved"
+                            android:textColor="@color/black_white_selector" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/paid_count_scTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/paid_sc_tab"
+                            android:layout_marginEnd="-5dp"
+                            android:background="@drawable/green_round_bg"
+                            android:elevation="@dimen/dimen5"
+                            android:fontFamily="@font/outfit_medium"
+                            android:paddingHorizontal="@dimen/dimen_12"
+                            android:paddingVertical="@dimen/dimen2"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_8" />
+
+                        <TextView
+                            android:id="@+id/paid_sc_tab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen5"
+                            android:layout_marginTop="@dimen/dimen5"
+                            android:layout_marginEnd="@dimen/dimen5"
+                            android:layout_marginBottom="@dimen/dimen5"
+                            android:background="@drawable/blackfill_blackborder_selector"
+                            android:paddingHorizontal="@dimen/dimen16"
+                            android:paddingVertical="@dimen/dimen_8"
+                            android:text="Paid"
+                            android:textColor="@color/black_white_selector" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/rejected_count_scTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/rejected_sc_tab"
+                            android:layout_marginEnd="-5dp"
+                            android:background="@drawable/red_round_bg"
+                            android:elevation="@dimen/dimen5"
+                            android:fontFamily="@font/outfit_medium"
+                            android:paddingHorizontal="@dimen/dimen_12"
+                            android:paddingVertical="@dimen/dimen2"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_8" />
+
+                        <TextView
+                            android:id="@+id/rejected_sc_tab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen5"
+                            android:layout_marginTop="@dimen/dimen5"
+                            android:layout_marginEnd="@dimen/dimen5"
+                            android:layout_marginBottom="@dimen/dimen5"
+                            android:background="@drawable/blackfill_blackborder_selector"
+                            android:paddingHorizontal="@dimen/dimen16"
+                            android:paddingVertical="@dimen/dimen_8"
+                            android:text="Rejected"
+                            android:textColor="@color/black_white_selector" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/ll_check_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:layout_marginVertical="@dimen/dimen_12"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/master_cbIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen3"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:src="@drawable/orange_checkbox_unselected" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="Check All"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shipping_chargesRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen_12"
+                android:layout_weight="1"
+                android:visibility="visible"
+                tools:listitem="@layout/shipping_charge_item" />
+
+            <TextView
+                android:id="@+id/no_shipping_charges_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/outfit_medium"
+                android:gravity="center"
+                android:text="@string/no_shipping_charges_record"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_sts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/reject_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen5"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:layout_marginEnd="@dimen/dimen5"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:background="@drawable/rejected_8bg"
+                    android:drawableLeft="@drawable/ic_close"
+                    android:drawablePadding="@dimen/dimen_8"
+                    android:paddingHorizontal="@dimen/dimen16"
+                    android:paddingVertical="@dimen/dimen_8"
+                    android:text="Reject"
+                    android:textColor="@color/white"
+
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/approve_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen5"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:layout_marginEnd="@dimen/dimen5"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:background="@drawable/approved_8bg"
+                    android:drawableLeft="@drawable/ic_right"
+                    android:drawablePadding="@dimen/dimen_8"
+                    android:paddingHorizontal="@dimen/dimen16"
+                    android:paddingVertical="@dimen/dimen_8"
+                    android:text="Approve"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

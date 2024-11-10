@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/worklogCardCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen10"
+        android:background="@drawable/round_grayish_border"
+        android:layout_marginVertical="@dimen/dimen5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:layout_marginBottom="@dimen/dimen5">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/timeNStatusLL"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/dateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:textSize="@dimen/dimen20"
+                        android:text="1st Jan 2024"
+                        android:fontFamily="@font/outfit_regular"/>
+                    <TextView
+                        android:id="@+id/commentTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen5"
+                        android:layout_marginRight="@dimen/dimen5"
+                        android:fontFamily="@font/outfit_regular"
+                        android:textSize="@dimen/dimen14"
+                        android:text="This is my daily worklog I am working today as well."/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/timeNStatusLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/timeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen14"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="00:00 AM" />
+                    <TextView
+                        android:id="@+id/otTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimen14"
+                        android:fontFamily="@font/outfit_medium"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/colorPrimary"
+                        android:text="OT: 00"/>
+                    <TextView
+                        android:id="@+id/statusTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_medium"
+                        android:textSize="@dimen/dimen_12"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingVertical="@dimen/dimen5"
+                        android:paddingHorizontal="@dimen/dimen10"
+                        android:layout_marginTop="@dimen/dimen_12"
+                        android:layout_marginBottom="@dimen/dimen5"
+                        android:background="@drawable/present_label_bg"
+                        android:textColor="@color/green"
+                        android:text="Present"/>
+                </LinearLayout>
+            </RelativeLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/commentTV"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/dimen_12"-->
+<!--                android:layout_marginTop="@dimen/dimen5"-->
+<!--                android:fontFamily="@font/outfit_regular"-->
+<!--                android:textSize="@dimen/dimen14"-->
+<!--                android:text="This is my daily worklog I am working today as well."/>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/worklogAttachmentRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_marginBottom="@dimen/dimen_12"
+                tools:listitem="@layout/worklog_attacthment_card"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

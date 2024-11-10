@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="userNameTV" type="id"/>
+    <item name="profileImgIV" type="id"/>
+    <item name="doctypeIV" type="id"/>
+</resources>

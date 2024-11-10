@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_8">
+
+        <TextView
+            android:id="@+id/lead_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@drawable/black_round_bg"
+            android:drawableRight="@drawable/ic_pencil"
+            android:layout_gravity="right"
+            android:drawablePadding="@dimen/dimen_8"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:paddingVertical="2dp"
+            android:text="Edit"
+            android:fontFamily="@font/outfit_medium"
+            android:textColor="@color/white"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            android:enabled="false"
+            app:expandedHintEnabled="false"
+            android:hint="@string/full_name">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:maxLines="1"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/nameTV"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="@string/mob_num">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/mobileTV"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:fontFamily="@font/outfit_regular"
+            android:hint="@string/alternate_num">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/alternateMobileTV"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="Email">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/emailTv"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="@string/requirement">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/requirementTV"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="@string/lead_type">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/leadTypeTV"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="@string/lead_source">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/leadSourceTv"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="@string/lead_owner">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/leadOwnerTv"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="@string/select_lead_ticket_size"
+            android:id="@+id/select_lead_ticket_size_tIL"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/selectLeadTicketSizeTv"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="Address Line 1">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/addressLine1Tv"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="Address Line 2">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/addressLine2Tv"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="State">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/stateTv"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:hint="City">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/cityTv"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="Enter Zipcode">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/enter_zipcodeTv"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="GSTIN/UIN">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/gstET"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:enabled="false"
+            android:hint="@string/notes_attachements">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/notesTv"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upload_file_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_12"
+            android:numColumns="3"
+            tools:listitem="@layout/upload_file_info"/>
+    </LinearLayout>
+
+</layout>

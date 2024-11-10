@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_8"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="@dimen/dimen_12"
+        app:cardElevation="@dimen/dimen_12"
+        app:cardCornerRadius="@dimen/dimen10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_grayish_border"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="7dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen10"
+                android:layout_marginStart="@dimen/dimen10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/dimen_12"
+                        android:layout_height="@dimen/dimen16"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dimen_8"
+                        android:background="@drawable/ic_pdf_img" />
+
+                    <TextView
+                        android:id="@+id/pdf_nameTV"
+                        android:layout_width="wrap_content"
+                        android:maxWidth="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/outfit_regular"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="@dimen/dimen_12"
+                        android:text="pO_# 03698 FT (02510).pdf" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/creation_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginVertical="@dimen/dimen3"
+                    android:fontFamily="@font/outfit_regular"
+                    android:maxLines="1"
+                    android:textSize="@dimen/dimen_12"
+                    android:textColor="@color/hint_text_gray" />
+
+                <TextView
+                    android:id="@+id/ERD_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/outfit_regular"
+                    android:maxLines="1"
+                    android:textSize="@dimen/dimen_12"
+                    android:textColor="@color/hint_text_gray" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen5">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="@dimen/dimen10"
+                    android:layout_marginVertical="@dimen/dimen10"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/update_teansportationTV"
+                        android:layout_width="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen10"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/orange_round_bg"
+                        android:fontFamily="@font/outfit_medium"
+                        android:paddingHorizontal="@dimen/dimen10"
+                        android:paddingVertical="@dimen/dimen3"
+                        android:textSize="@dimen/dimen_12"
+                        android:text="Update Trans. Details"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/transport_mode_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginVertical="@dimen/dimen3"
+                    android:fontFamily="@font/outfit_regular"
+                    android:maxLines="1"
+                    android:textSize="@dimen/dimen_12"
+                    android:visibility="gone"
+                    android:textColor="@color/hint_text_gray" />
+
+                <TextView
+                    android:id="@+id/vehicle_numTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/outfit_regular"
+                    android:maxLines="1"
+                    android:visibility="gone"
+                    android:textSize="@dimen/dimen_12"
+                    android:textColor="@color/hint_text_gray" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/markPOArrangeIV"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="@dimen/dimen2"
+                        android:layout_marginEnd="@dimen/dimen15"
+                        android:src="@drawable/po_arranged_check" />
+
+                    <ImageView
+                        android:id="@+id/view_pdfIV"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="@dimen/dimen2"
+                        android:src="@drawable/ic_eye_border" />
+
+                </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

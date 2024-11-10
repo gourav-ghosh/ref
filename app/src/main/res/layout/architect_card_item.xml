@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_12"
+        android:layout_marginBottom="@dimen/dimen10"
+        android:background="@drawable/round_grayish_border">
+
+        <TextView
+            android:id="@+id/enterprise_nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_12"
+            android:text="Raj 1 ( Raj Enterprises)"
+            android:textColor="@color/black"
+            android:fontFamily="@font/outfit_regular"/>
+        <TextView
+            android:id="@+id/sinceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_12"
+            android:text="since 21 Dec 2023"
+            android:layout_marginVertical="@dimen/dimen5"
+            android:layout_below="@id/enterprise_nameTV"
+            android:fontFamily="@font/outfit_regular"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_12"
+            android:text="Rajesh"
+            android:layout_below="@id/sinceTV"
+            android:fontFamily="@font/outfit_regular"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/order_countTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_regular"
+            android:textColor="@color/orange"
+            android:background="@drawable/faded_orange_round_6bg"
+            android:paddingVertical="@dimen/dimen2"
+            android:paddingHorizontal="@dimen/dimen20"
+            android:layout_alignParentEnd="true" />
+        <ImageView
+            android:id="@+id/call_btn_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone_call"
+            android:layout_alignBottom="@id/nameTV"
+            android:layout_alignParentEnd="true"
+            app:tint="@color/hint_text_gray" />
+
+        <ImageView
+            android:id="@+id/whatsapp_btn_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_gray_whatsapp"
+            android:layout_alignBottom="@id/call_btn_iv"
+            android:layout_toStartOf="@id/call_btn_iv"
+            android:layout_marginEnd="@dimen/dimen_12" />
+    </RelativeLayout>
+
+</layout>

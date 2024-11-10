@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".screens.fragments.ProofOfComplaintTabFragment">
+
+        <TextView
+            android:id="@+id/proof_of_resolution_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen16"
+            android:fontFamily="@font/outfit_medium"
+            android:text="Proof of Resolution"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen16" />
+        <LinearLayout
+            android:id="@+id/resLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dimen_8"
+            android:layout_alignBottom="@id/proof_of_resolution_text"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/response_select_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:text="select"/>
+
+        <ImageView
+            android:id="@+id/upload_resolution_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen20"
+            android:layout_alignBottom="@id/proof_of_resolution_text"
+            android:src="@drawable/ic_upload_curved" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/res_img_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/proof_of_resolution_text"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/no_resolution_proofTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F9F9FC"
+                android:fontFamily="@font/outfit_medium"
+                android:paddingVertical="@dimen/dimen20"
+                android:text="No Proof Available"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/upload_resolution_file_rv"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/proof_of_resolution_text"
+                android:numColumns="3"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/upload_file_info"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/resolve_see_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show more"
+                android:textColor="@color/orange"
+                android:fontFamily="@font/outfit_regular"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/proof_of_complaint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/res_img_ll"
+            android:layout_marginVertical="@dimen/dimen16"
+            android:layout_marginBottom="@dimen/dimen16"
+            android:fontFamily="@font/outfit_medium"
+            android:text="Proof of Complaint"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen16" />
+        <LinearLayout
+            android:id="@+id/compLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dimen_8"
+            android:layout_alignBottom="@id/proof_of_complaint_text"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/complaint_select_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:text="select"/>
+
+            <ImageView
+                android:id="@+id/upload_complaint_IV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen20"
+                android:layout_alignBottom="@id/proof_of_complaint_text"
+                android:src="@drawable/ic_upload_curved" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/complaint_img_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/proof_of_complaint_text"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/no_complaint_proofTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F9F9FC"
+            android:fontFamily="@font/outfit_medium"
+            android:paddingVertical="@dimen/dimen20"
+            android:text="No Proof Available"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upload_complaint_file_rv"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/proof_of_complaint_text"
+            android:numColumns="3"
+            android:visibility="visible"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/upload_file_info" />
+            <TextView
+                android:id="@+id/complaint_see_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show more"
+                android:textColor="@color/orange"
+                android:fontFamily="@font/outfit_regular"
+                android:layout_marginBottom="@dimen/dimen20"
+                android:layout_gravity="end"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

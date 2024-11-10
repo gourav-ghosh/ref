@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/dimen_12"
+        android:layout_marginBottom="@dimen/dimen10"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/present_dialog_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/outfit_medium"
+            android:text="Update Work Details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen16" />
+
+        <ImageView
+            android:id="@+id/present_dialog_crossIV"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dimen5"
+            android:layout_alignBottom="@id/present_dialog_title_tv"
+            android:src="@drawable/ic_cross" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/present_dialog_title_tv"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                    android:id="@+id/work_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/hint_text_gray"
+                    android:layout_marginVertical="@dimen/dimen10"
+                    android:hint="@string/work_detail_mandatory"
+                    app:expandedHintEnabled="false">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/workDetailsET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:gravity="top"
+                    android:hint="Mention your work detail"
+                    android:padding="@dimen/dimen_8"
+                    android:minHeight="@dimen/dimen80"
+                    android:textColorHint="@color/hint_text_gray" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:id="@+id/attachmentTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/work_detail"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textSize="@dimen/dimen16"
+                    android:text="Attachments :"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="@dimen/dimen15"
+                    android:layout_below="@id/attachmentTV"
+                    android:background="@drawable/gray_dotted_round5_border"
+                    android:paddingHorizontal="@dimen/dimen_12">
+                    <ImageView
+                        android:id="@+id/present_img_iv"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dimen16"
+                        android:src="@drawable/ic_cloud_upload"
+                        app:tint="@color/orange" />
+                    <TextView
+                        android:id="@+id/present_select_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/present_img_iv"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/outfit_medium"
+                        android:padding="@dimen/dimen_12"
+                        android:text="@string/select_media_to_upload" />
+                    <TextView
+                        android:id="@+id/presentFormatTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/present_select_img"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="@string/upload_media_format" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/present_upload_img_rv"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:numColumns="3"
+                android:visibility="gone"
+                tools:listitem="@layout/upload_file_info" />
+            <RelativeLayout
+                android:id="@+id/overtimeRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10">
+                <ImageView
+                    android:id="@+id/overtimeCB"
+                    android:layout_width="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen20"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dimen5"
+                    android:src="@drawable/orange_checkbox_unselected"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/overtimeCB"
+                    android:layout_marginStart="@dimen/dimen5"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14"
+                    android:text="Overtime (In Hrs)"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hoursWorkedET"
+                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dimen_60"
+                    android:layout_alignParentEnd="true"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    android:background="@drawable/border_bottom_gray"
+                    android:hint="2.5"
+                    android:inputType="numberDecimal"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/present_dialog_upload_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/green_round_bg"
+                android:fontFamily="@font/outfit_regular"
+                android:paddingHorizontal="@dimen/dimen20"
+                android:paddingVertical="@dimen/dimen6"
+                android:layout_marginVertical="@dimen/dimen_12"
+                android:text="Update"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_12"
+        android:outlineSpotShadowColor="@color/orange"
+        app:cardElevation="@dimen/dimen_12">
+
+        <RelativeLayout
+            android:id="@+id/complaintCV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_12">
+
+            <TextView
+                android:id="@+id/ticket_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen3"
+                android:fontFamily="@font/outfit_medium"
+                android:text="@string/ticket_no"
+                android:textSize="@dimen/dimen16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ticket_no"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_marginEnd="@dimen/dimen5"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Tuesday , 02 Oct 2022"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen10" />
+
+
+            <TextView
+                android:id="@+id/Created_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/black_round_bg"
+                android:fontFamily="@font/outfit_medium"
+                android:paddingHorizontal="@dimen/dimen_8"
+                android:paddingVertical="@dimen/dimen3"
+                android:text="Created"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/date_time_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Created_tag"
+                android:layout_alignParentEnd="true"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:fontFamily="@font/outfit_medium"
+                android:text="09 Dec 2022 , 08:00pm"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen10" />
+
+            <View
+                android:id="@+id/separator_1"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@id/date_time_right"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:background="@color/hint_text_gray" />
+
+            <LinearLayout
+                android:id="@+id/detailsLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separator_1"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="33"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/order_noTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:drawableLeft="@drawable/ic_note"
+                        android:drawablePadding="@dimen/dimen6"
+                        android:drawableTint="@color/black"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="#54322"
+                        android:textSize="@dimen/dimen_12" />
+
+                    <TextView
+                        android:id="@+id/customer_nameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/order_noTV"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/dimen6"
+                        android:drawableLeft="@drawable/ic_border_user"
+                        android:drawablePadding="@dimen/dimen3"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:drawableTint="@color/black"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Manoj Rana"
+                        android:textSize="@dimen/dimen_12" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.2dp"
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_marginHorizontal="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="33">
+
+                    <TextView
+                        android:id="@+id/dateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:drawableLeft="@drawable/ic_border_calender"
+                        android:drawablePadding="@dimen/dimen6"
+                        android:drawableTint="@color/black"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="13 Jan 2024"
+                        android:textSize="@dimen/dimen_12" />
+
+                    <TextView
+                        android:id="@+id/sale_exeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dateTV"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/dimen6"
+                        android:drawableLeft="@drawable/ic_sales_exe"
+                        android:drawablePadding="@dimen/dimen3"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:drawableTint="@color/black"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Nilesh Kumar"
+                        android:textSize="@dimen/dimen_12" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.2dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="34">
+
+                    <TextView
+                        android:id="@+id/cautionTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:drawableLeft="@drawable/ic_caution"
+                        android:drawablePadding="@dimen/dimen6"
+                        android:layout_marginBottom="@dimen/dimen6"
+                        android:drawableTint="@color/red"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Mytyles"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:id="@+id/sup_exeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cautionTV"
+                        android:layout_alignParentStart="true"
+                        android:drawableLeft="@drawable/ic_support"
+                        android:drawablePadding="@dimen/dimen6"
+                        android:drawableTint="@color/black"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Nilesh Kumar"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/dimen_12" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/complaint_commentIV"
+                android:layout_width="@dimen/dimen20"
+                android:layout_height="@dimen/dimen20"
+                android:layout_below="@id/detailsLL"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/dimen2"
+                android:layout_marginTop="@dimen/dimen5"
+                android:src="@drawable/ic_coment" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

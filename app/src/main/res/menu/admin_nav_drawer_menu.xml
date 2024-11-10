@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/ic_manageleads"
+            android:iconTint="@color/gray"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/drawer_lead_listing"
+            android:icon="@drawable/ic_drawer_lead_listing"
+            android:iconTint="@color/gray"
+            android:title="Manage Lead" />
+        <item
+            android:id="@+id/drawer_manage_quote"
+            android:icon="@drawable/ic_drawer_manage_quote"
+            android:title="Manage Quote" />
+        <item
+            android:id="@+id/drawer_manage_users"
+            android:icon="@drawable/ic_manageleads"
+            android:title="Manage Users" />
+        <item
+            android:id="@+id/drawer_manage_inquiries"
+            android:icon="@drawable/ic_manageorders"
+            android:title="Manage Inquiries" />
+        <item
+            android:id="@+id/drawer_razorpay"
+            android:icon="@drawable/ic_razorpay_link"
+            android:title="Razorpay" />
+        <item
+            android:id="@+id/drawer_order"
+            android:icon="@drawable/ic_cart"
+            android:title="Order" />
+        <item
+            android:id="@+id/drawer_complaint"
+            android:icon="@drawable/ic_complaint"
+            android:iconTint="@color/gray"
+            android:title="Complaint Management" />
+        <item
+            android:id="@+id/drawer_transaction_history"
+            android:icon="@drawable/ic_complaint"
+            android:iconTint="@color/gray"
+            android:title="Transaction History" />
+        <item
+            android:id="@+id/drawer_achitect"
+            android:icon="@drawable/ic_complaint"
+            android:iconTint="@color/gray"
+            android:title="Architext / Interior " />
+    </group>
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Log out" />
+</menu>

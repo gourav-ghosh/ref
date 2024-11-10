@@ -1,0 +1,1566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/no_report_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/outfit_medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/no_report_found"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/report_ns"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".screens.fragments.HomeFragment">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/order_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_12"
+                        android:foreground="@drawable/round_grayish_border"
+                        app:cardCornerRadius="@dimen/dimen10"
+                        app:cardElevation="@dimen/dimen10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen50"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dimen_12"
+                                android:layout_marginTop="@dimen/dimen_12"
+                                android:layout_marginEnd="@dimen/dimen_12"
+                                android:layout_marginBottom="@dimen/dimen_12"
+                                android:layout_weight="1"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/outfit_medium"
+                                android:maxLines="1"
+                                android:text="Order Analytics"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen16"
+                                />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/all_sales_cv"
+                                android:layout_width="@dimen/dimen100"
+                                android:layout_height="@dimen/dimen40"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/dimen10"
+                                android:layout_toStartOf="@id/all_month_cv"
+                                app:cardCornerRadius="@dimen/dimen5">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/sale_person_sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:theme="@style/SpinnerTheme">
+
+                                </androidx.appcompat.widget.AppCompatSpinner>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/all_month_cv"
+                                android:layout_width="@dimen/dimen100"
+                                android:layout_height="@dimen/dimen40"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/dimen10"
+                                app:cardCornerRadius="@dimen/dimen5">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/all_month_spinnerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:theme="@style/SpinnerTheme" />
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grayish" />
+
+                            <RelativeLayout
+                                android:id="@+id/custom_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_marginStart="@dimen/dimen20"
+                                    android:id="@+id/from_date_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dimen16"
+                                    android:layout_marginBottom="@dimen/dimen_4"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:text="From Date"
+                                    android:textColor="@color/gray" />
+
+                                <TextView
+                                    android:layout_marginStart="@dimen/dimen20"
+                                    android:layout_below="@id/from_date_tv"
+                                    android:id="@+id/from_date"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/gray_round_4bg"
+                                    android:drawableEnd="@drawable/ic_calender"
+                                    android:drawablePadding="@dimen/dimen_36"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:paddingHorizontal="@dimen/dimen_8"
+                                    android:paddingVertical="@dimen/dimen_4"
+                                    android:textColor="@color/gray" />
+
+                                <TextView
+                                    android:layout_toRightOf="@id/from_date"
+                                    android:id="@+id/to_date_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dimen10"
+                                    android:layout_marginTop="@dimen/dimen16"
+                                    android:layout_marginBottom="@dimen/dimen_4"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:text="To Date"
+                                    android:textColor="@color/gray" />
+
+                                <TextView
+                                    android:layout_marginStart="@dimen/dimen10"
+                                    android:layout_toRightOf="@id/from_date"
+                                    android:layout_below="@id/to_date_tv"
+                                    android:id="@+id/to_date"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/gray_round_4bg"
+                                    android:drawableEnd="@drawable/ic_calender"
+                                    android:drawablePadding="@dimen/dimen_36"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:paddingHorizontal="@dimen/dimen_8"
+                                    android:paddingVertical="@dimen/dimen_4"
+                                    android:textColor="@color/gray" />
+
+                                <TextView
+                                    android:id="@+id/apply_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_below="@id/to_date"
+                                    android:layout_marginTop="@dimen/dimen_8"
+                                    android:layout_marginEnd="@dimen/dimen_8"
+                                    android:background="@drawable/black_round_bg"
+                                    android:paddingHorizontal="@dimen/dimen_12"
+                                    android:paddingVertical="@dimen/dimen_4"
+                                    android:text="Apply"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:textColor="@color/white"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/sale_graph_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginTop="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen5"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="Sale Graph"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen15" />
+
+                                <TextView
+                                    android:id="@+id/sales_analysis_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/sale_graph_text"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen_12"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="Sales Analysis of past 6 months"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/dimen_12" />
+
+
+                            </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dimen250"
+                                android:fontFamily="@font/outfit_medium"
+                                android:gravity="center_vertical"
+                                android:rotation="-90"
+                                android:text="Sale Price Of Orders"
+                                android:layout_alignParentStart="true"
+                                android:textColor="@color/orange"
+                                android:layout_marginLeft="-40dp"
+                                android:layout_marginRight="-40dp"
+                                android:textSize="@dimen/dimen_12">
+
+                            </TextView>
+
+                            <com.github.mikephil.charting.charts.BarChart
+                                android:id="@+id/BarChart1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen250"
+                                android:layout_marginStart="@dimen/dimen25"
+                                android:layout_marginTop="@dimen/dimen5"
+                                android:layout_marginEnd="@dimen/dimen5"
+                                android:layout_marginBottom="@dimen/dimen5" />
+
+
+                        </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/order_graph_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginTop="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen5"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="Order Graph"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen15" />
+
+                                <TextView
+                                    android:id="@+id/order_analysis_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/order_graph_text"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen_12"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="Order Analysis of past 6 months"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/dimen_12" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/dimen250"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:gravity="center_vertical"
+                                    android:rotation="-90"
+                                    android:text="No. Of Orders"
+                                    android:textColor="@color/orange"
+                                    android:layout_marginLeft="-20dp"
+                                    android:textSize="@dimen/dimen_12">
+
+                                </TextView>
+
+                                <com.github.mikephil.charting.charts.BarChart
+                                    android:id="@+id/barChart2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen250"
+                                    android:layout_marginStart="@dimen/dimen25"
+                                    android:layout_marginTop="@dimen/dimen5"
+                                    android:layout_marginEnd="@dimen/dimen5"
+                                    android:layout_marginBottom="@dimen/dimen5" />
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/visit_graph_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginTop="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen5"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="Visit Graph"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen15" />
+
+                                <TextView
+                                    android:id="@+id/showroom_visit_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/visit_graph_text"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen_12"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="Showroom visit of past 6 months"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/dimen_12" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/dimen250"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:gravity="center_vertical"
+                                    android:rotation="-90"
+                                    android:text="No.Of Lead Visits"
+                                    android:layout_alignParentStart="true"
+                                    android:textColor="@color/orange"
+                                    android:layout_marginLeft="-32dp"
+                                    android:layout_marginRight="-40dp"
+                                    android:textSize="@dimen/dimen_12">
+
+                                </TextView>
+
+                                <com.github.mikephil.charting.charts.BarChart
+                                    android:id="@+id/barChart3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen250"
+                                    android:layout_marginStart="@dimen/dimen25"
+                                    android:layout_marginTop="@dimen/dimen5"
+                                    android:layout_marginEnd="@dimen/dimen5"
+                                    android:layout_marginBottom="@dimen/dimen5" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <TextView
+                                    android:id="@+id/sale_amount_report_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginTop="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen_12"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="Sale Amount Report"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen15" />
+
+                                <LinearLayout
+                                    android:layout_below="@id/sale_amount_report_text"
+                                    android:id="@+id/sale_amount_report_linear_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/sales_analysis_textt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginTop="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen5"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="Sales Analysis"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen15" />
+
+                                <TextView
+                                    android:id="@+id/sales_analysis_of_this_month_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/sales_analysis_textt"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen_12"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="Sales Analysis of this months"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/dimen_12" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/dimen250"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:gravity="center_vertical"
+                                    android:rotation="-90"
+                                    android:text="Sale Value Of Orders"
+                                    android:layout_alignParentStart="true"
+                                    android:textColor="@color/orange"
+                                    android:layout_marginLeft="-40dp"
+                                    android:layout_marginRight="-40dp"
+                                    android:textSize="@dimen/dimen_12">
+
+                                </TextView>
+
+                                <com.github.mikephil.charting.charts.BarChart
+                                    android:id="@+id/barChart4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dimen250"
+                                    android:layout_marginStart="@dimen/dimen25"
+                                    android:layout_marginTop="@dimen/dimen5"
+                                    android:layout_marginEnd="@dimen/dimen5"
+                                    android:layout_marginBottom="@dimen/dimen5" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/lead_ticket_pie_chart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="@dimen/dimen_12"
+                                android:layout_marginTop="@dimen/dimen_12"
+                                android:layout_marginEnd="@dimen/dimen_12"
+                                android:layout_marginBottom="@dimen/dimen5"
+                                android:fontFamily="@font/outfit_regular"
+                                android:text="Lead Ticket Pie chart"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen15" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="100"
+                                android:orientation="horizontal">
+
+                                <com.github.mikephil.charting.charts.PieChart
+                                    android:id="@+id/order_pie_chart"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="45"
+                                    android:layout_height="@dimen/dimen200"
+                                    android:layout_marginStart="@dimen/dimen20"
+                                    android:layout_marginTop="@dimen/dimen5"
+                                    android:layout_marginEnd="@dimen/dimen5"
+                                    android:layout_marginBottom="@dimen/dimen5" />
+
+                                <TableLayout
+                                    android:gravity="center_vertical"
+                                    android:id="@+id/child_layout"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="55"
+                                    android:layout_height="@dimen/dimen200"
+                                    android:orientation="vertical"
+                                    android:layout_marginStart="@dimen/dimen20"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/quotation_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_12"
+                        android:foreground="@drawable/round_grayish_border"
+                        app:cardCornerRadius="@dimen/dimen10"
+                        app:cardElevation="@dimen/dimen10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen50"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginTop="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen_12"
+                                    android:layout_weight="1"
+                                    android:ellipsize="marquee"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:maxLines="1"
+                                    android:text="Quotation Analytics"
+                                    android:textColor="@color/black" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="@dimen/dimen100"
+                                    android:layout_height="@dimen/dimen40"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/dimen10"
+                                    android:layout_toStartOf="@id/month_cv"
+                                    app:cardCornerRadius="@dimen/dimen5">
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/year_sp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:theme="@style/SpinnerTheme"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/month_cv"
+                                    android:layout_width="@dimen/dimen100"
+                                    android:layout_height="@dimen/dimen40"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/dimen10"
+                                    app:cardCornerRadius="@dimen/dimen5">
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/month_spinnerView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:theme="@style/SpinnerTheme" />
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grayish" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/text1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginTop="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen_12"
+                                    android:fontFamily="@font/outfit_regular"
+                                    android:text="Open Vs Converted Quotations"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen_12" />
+
+                                <ImageView
+                                    android:id="@+id/quotation_export_iv"
+                                    android:layout_width="30dp"
+                                    android:layout_height="25dp"
+                                    android:layout_below="@id/text1"
+                                    android:layout_alignTop="@id/text1"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:background="@drawable/export_with_bg"
+                                    android:paddingHorizontal="@dimen/dimen_4"
+                                    android:paddingVertical="@dimen/dimen5"
+                                    app:tint="@color/white" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="100">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dimen200"
+                                    android:layout_weight="50">
+
+                                    <LinearLayout
+                                        android:layout_width="@dimen/dimen100"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/dimen3">
+
+                                        <TextView
+                                            android:id="@+id/total_tv"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/outfit_medium"
+                                            android:text="8000"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/outfit_medium"
+                                            android:text="Total No. Of Quotes"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/black"
+                                            android:textSize="10sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                                        android:id="@+id/progressBar"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        app:indicatorColor="@color/brown"
+                                        app:indicatorSize="120dp"
+                                        app:trackColor="@color/light_orange"
+                                        app:trackCornerRadius="10dp"
+                                        app:trackThickness="10dp" />
+
+                                </RelativeLayout>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="50"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/open_quotesLL"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <View
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:background="@drawable/brown_circle" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/dimen_12"
+                                            android:fontFamily="@font/outfit_medium"
+                                            android:text="Open Quotes"
+                                            android:textSize="@dimen/dimen_12"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/open_quotesLL"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginVertical="@dimen/dimen_8"
+                                        android:layout_marginStart="@dimen/dimen25"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="Count : "
+                                                android:textColor="@color/gray" />
+
+                                            <TextView
+                                                android:id="@+id/count"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:maxLines="1"
+                                                android:text=""
+                                                android:textColor="@color/gray" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="Amount : "
+                                                android:textColor="@color/gray" />
+
+                                            <TextView
+                                                android:id="@+id/amountTV"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:maxLines="1"
+                                                android:text=""
+                                                android:textColor="@color/gray" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="Time : "
+                                                android:textColor="@color/gray" />
+
+                                            <TextView
+                                                android:id="@+id/timeTV"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="end"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:maxLines="1"
+                                                android:text=""
+                                                android:textColor="@color/gray" />
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/converted_quote_LL"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <View
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:background="@drawable/light_brown_circle" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/dimen_12"
+                                            android:fontFamily="@font/outfit_medium"
+                                            android:text="Converted Quotes"
+                                            android:textSize="@dimen/dimen_12"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/open_quotesLL"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginVertical="@dimen/dimen_8"
+                                        android:layout_marginStart="@dimen/dimen25"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="Count : "
+                                                android:textColor="@color/gray" />
+
+                                            <TextView
+                                                android:id="@+id/converted_count"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:maxLines="1"
+                                                android:text=""
+                                                android:textColor="@color/gray" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="Amount : "
+                                                android:textColor="@color/gray" />
+
+                                            <TextView
+                                                android:id="@+id/converted_amountTV"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:maxLines="1"
+                                                android:text=""
+                                                android:textColor="@color/gray" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="Time : "
+                                                android:textColor="@color/gray" />
+
+                                            <TextView
+                                                android:id="@+id/converted_timeTV"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="end"
+                                                android:ellipsize="end"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:maxLines="1"
+                                                android:text=""
+                                                android:textColor="@color/gray" />
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/lead_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_12"
+                        android:foreground="@drawable/round_grayish_border"
+                        app:cardCornerRadius="@dimen/dimen10"
+                        app:cardElevation="@dimen/dimen10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen50">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dimen_12"
+                                    android:layout_marginTop="@dimen/dimen_12"
+                                    android:layout_marginEnd="@dimen/dimen_12"
+                                    android:layout_marginBottom="@dimen/dimen_12"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:text="Lead Analytics"
+                                    android:textColor="@color/black" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="@dimen/dimen100"
+                                    android:layout_height="@dimen/dimen40"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/dimen10"
+                                    app:cardCornerRadius="@dimen/dimen5">
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/lead_year_spinnerView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:theme="@style/SpinnerTheme" />
+                                </androidx.cardview.widget.CardView>
+
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grayish" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen10"
+                                android:layout_marginTop="@dimen/dimen10"
+                                android:layout_marginRight="@dimen/dimen10"
+                                android:layout_marginBottom="@dimen/dimen10"
+                                android:foreground="@drawable/round_grayish_border"
+                                app:cardCornerRadius="@dimen/dimen10"
+                                app:cardElevation="@dimen/dimen10">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginStart="@dimen/dimen_12"
+                                            android:layout_marginTop="@dimen/dimen_12"
+                                            android:layout_marginEnd="@dimen/dimen_12"
+                                            android:layout_marginBottom="@dimen/dimen_12"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Lead generation by sources"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/dimen_12" />
+
+                                        <ImageView
+                                            android:id="@+id/export_lead_gen_iv"
+                                            android:layout_width="30dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_marginTop="@dimen/dimen10"
+                                            android:layout_marginEnd="@dimen/dimen_12"
+                                            android:background="@drawable/export_with_bg"
+                                            android:paddingHorizontal="@dimen/dimen_4"
+                                            android:paddingVertical="@dimen/dimen5" />
+                                    </RelativeLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:paddingBottom="@dimen/dimen10"
+                                        android:weightSum="100">
+
+                                        <com.github.mikephil.charting.charts.LineChart
+                                            android:id="@+id/lineChart"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/dimen250"
+                                            android:layout_margin="@dimen/dimen5"
+                                            android:layout_marginTop="8dp" />
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/colorStatus_rv"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dimen5" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen10"
+                                android:layout_marginRight="@dimen/dimen10"
+                                android:layout_marginBottom="@dimen/dimen10"
+                                android:foreground="@drawable/round_grayish_border"
+                                app:cardCornerRadius="@dimen/dimen10"
+                                app:cardElevation="@dimen/dimen10">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dimen50"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginStart="@dimen/dimen_12"
+                                            android:layout_marginTop="@dimen/dimen_12"
+                                            android:layout_marginEnd="@dimen/dimen_12"
+                                            android:layout_marginBottom="@dimen/dimen_12"
+                                            android:layout_weight="1"
+                                            android:ellipsize="end"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:maxLines="1"
+                                            android:text="Lead Conversion Report"
+                                            android:textColor="@color/black" />
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="@dimen/dimen100"
+                                            android:layout_height="@dimen/dimen40"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="@dimen/dimen10"
+                                            android:layout_toLeftOf="@+id/export_lead_conv_iv"
+                                            app:cardCornerRadius="@dimen/dimen5">
+
+                                            <androidx.appcompat.widget.AppCompatSpinner
+                                                android:id="@+id/lead_month_spinnerView"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:theme="@style/SpinnerTheme" />
+                                        </androidx.cardview.widget.CardView>
+
+                                        <ImageView
+                                            android:id="@+id/export_lead_conv_iv"
+                                            android:layout_width="30dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginEnd="@dimen/dimen_12"
+                                            android:background="@drawable/export_with_bg"
+                                            android:paddingHorizontal="@dimen/dimen_4"
+                                            android:paddingVertical="@dimen/dimen5"/>
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@color/grayish" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dimen250"
+                                        android:orientation="vertical"
+                                        android:paddingBottom="@dimen/dimen10"
+                                        android:weightSum="100">
+
+                                        <com.github.mikephil.charting.charts.PieChart
+                                            android:id="@+id/pieChart"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="90"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="@dimen/dimen10"/>
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="10"
+                                            android:id="@+id/piechart_rv"
+                                            android:layout_alignParentBottom="true"/>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/sc_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/dimen100">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen50"
+                            android:layout_marginTop="@dimen/dimen10"
+                            android:layout_marginBottom="@dimen/dimen10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dimen16"
+                                android:layout_marginTop="@dimen/dimen_12"
+                                android:layout_marginEnd="@dimen/dimen_12"
+                                android:layout_marginBottom="@dimen/dimen_12"
+                                android:fontFamily="@font/outfit_semibold"
+                                android:text="Stock check inquiry"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/dimen100"
+                                android:layout_height="@dimen/dimen40"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/dimen20"
+                                app:cardCornerRadius="@dimen/dimen5">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/sc_sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:theme="@style/SpinnerTheme" />
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dimen100"
+                            android:scrollIndicators="none"
+                            android:scrollbars="none">
+
+                            <GridLayout
+                                android:id="@+id/stock_check_inquiry_linear_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dimen10"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="185dp"
+                                    android:layout_height="140dp"
+                                    android:layout_margin="@dimen/dimen5"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="@dimen/dimen10">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="@dimen/dimen_12"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Total Inquiries"
+                                            android:textColor="@color/gray"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/dimen15"
+                                            />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:weightSum="1"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/total_inquiries_count_tv2"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="0.5"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/dimen_4"
+                                                android:fontFamily="@font/outfit_medium"
+                                                android:text="2000"
+                                                android:textSize="25sp"
+                                                android:textStyle="bold"
+                                                />
+
+                                            <TextView
+                                                android:layout_marginStart="@dimen/dimen30"
+                                                android:layout_gravity="center|end"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="0.4"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/total_inquiry_percentageTV"
+                                                android:drawableEnd="@drawable/ic_green_up"
+                                                android:drawablePadding="@dimen/dimen5"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="87%"
+                                                android:textColor="@color/green"
+                                                android:textStyle="bold" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_alignParentBottom="true"
+                                            android:id="@+id/total_inquiry_percentage_text_TV"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="@dimen/dimen3"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Less than yesterday"
+                                            android:textColor="@color/green"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/dimen15"/>
+
+                                    </RelativeLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="185dp"
+                                    android:layout_height="140dp"
+                                    android:layout_margin="@dimen/dimen5"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="@dimen/dimen10">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="@dimen/dimen_12"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Available Inquiries"
+                                            android:textColor="@color/gray"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/dimen15"
+                                            />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:weightSum="1"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/available_inquiries_count_tv"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="0.5"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/dimen_4"
+                                                android:fontFamily="@font/outfit_medium"
+                                                android:text="567"
+                                                android:textSize="25sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_marginStart="@dimen/dimen30"
+                                                android:layout_gravity="center|end"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="0.5"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/available_inquiry_percentageTV"
+                                                android:drawableEnd="@drawable/ic_green_up"
+                                                android:drawablePadding="@dimen/dimen5"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="87%"
+                                                android:textColor="@color/green"
+                                                android:textStyle="bold" />
+
+
+                                        </LinearLayout>
+                                        <TextView
+                                            android:layout_alignParentBottom="true"
+                                            android:textSize="@dimen/dimen15"
+                                            android:id="@+id/available_inquiry_percentage_text_TV"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="@dimen/dimen3"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Less than yesterday"
+                                            android:textColor="@color/green"
+                                            android:textStyle="bold"
+                                            />
+                                    </RelativeLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="185dp"
+                                    android:layout_height="140dp"
+                                    android:layout_margin="@dimen/dimen5"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="@dimen/dimen10">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="@dimen/dimen_12"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Not Available  Inquiries "
+                                            android:textColor="@color/gray"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/dimen15"
+                                            />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:weightSum="1"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/not_available_inquiries_count_tv"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="0.5"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/dimen_4"
+                                                android:fontFamily="@font/outfit_medium"
+                                                android:text="Count"
+                                                android:textStyle="bold"
+                                                android:textSize="25sp"/>
+
+                                            <TextView
+                                                android:layout_marginStart="@dimen/dimen30"
+                                                android:layout_gravity="center|end"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="0.5"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/not_available_inquiry_percentageTV"
+                                                android:drawableEnd="@drawable/ic_green_up"
+                                                android:drawablePadding="@dimen/dimen5"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="87%"
+                                                android:textColor="@color/green"
+                                                android:textStyle="bold"
+                                                />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_alignParentBottom="true"
+                                            android:textSize="@dimen/dimen15"
+                                            android:id="@+id/not_available_inquiry_percentage_text_TV"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="@dimen/dimen3"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Less than yesterday"
+                                            android:textColor="@color/green"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="185dp"
+                                    android:layout_height="140dp"
+                                    android:layout_margin="@dimen/dimen5"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="@dimen/dimen10">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="@dimen/dimen_12"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="@string/inquiries_not_available_order_placed"
+                                            android:textColor="@color/gray"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/dimen15"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:weightSum="1"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/not_avail_order_place_inquiries_count_tv"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="0.5"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/dimen_4"
+                                                android:fontFamily="@font/outfit_medium"
+                                                android:text="Count"
+                                                android:textStyle="bold"
+                                                android:textSize="25sp"/>
+
+                                            <TextView
+                                                android:layout_marginStart="@dimen/dimen30"
+                                                android:layout_gravity="center|end"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="0.5"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/not_avail_order_place_inquiry_percentageTV"
+                                                android:drawableEnd="@drawable/ic_green_up"
+                                                android:drawablePadding="@dimen/dimen5"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="87%"
+                                                android:textColor="@color/green"
+                                                android:textStyle="bold" />
+
+                                        </LinearLayout>
+                                        <TextView
+                                            android:layout_alignParentBottom="true"
+                                            android:textSize="@dimen/dimen15"
+                                            android:id="@+id/not_avail_order_place_inquiry_percentage_text_TV"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="@dimen/dimen3"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Less than yesterday"
+                                            android:textColor="@color/green"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="185dp"
+                                    android:layout_height="140dp"
+                                    android:layout_margin="@dimen/dimen5"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="@dimen/dimen10">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="@dimen/dimen_12"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Inquiries handled by Mytyle Support"
+                                            android:textColor="@color/gray"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/dimen15"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:weightSum="1"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/inquiries_handled_count_tv"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="0.5"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/dimen3"
+                                                android:fontFamily="@font/outfit_medium"
+                                                android:text="Count"
+                                                android:textStyle="bold"
+                                                android:textSize="25sp"/>
+
+                                            <TextView
+                                                android:layout_marginStart="@dimen/dimen30"
+                                                android:layout_gravity="center|end"
+                                                android:layout_width="0dp"
+                                                android:layout_weight="0.5"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/inquiries_handled_percentageTV"
+                                                android:drawableEnd="@drawable/ic_green_up"
+                                                android:drawablePadding="@dimen/dimen5"
+                                                android:fontFamily="@font/outfit_regular"
+                                                android:text="87%"
+                                                android:textColor="@color/green"
+                                                android:textStyle="bold"
+                                                android:textSize="@dimen/dimen16"/>
+
+                                        </LinearLayout>
+                                        <TextView
+                                            android:layout_alignParentBottom="true"
+                                            android:textSize="@dimen/dimen15"
+                                            android:id="@+id/inquiries_handled_percentage_text_TV"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="@dimen/dimen3"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Less than yesterday"
+                                            android:textColor="@color/green"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+                                </androidx.cardview.widget.CardView>
+
+                            </GridLayout>
+                        </HorizontalScrollView>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

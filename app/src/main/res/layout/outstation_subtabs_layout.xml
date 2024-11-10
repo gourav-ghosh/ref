@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tabCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/tab_nameTV"
+            android:layout_marginEnd="-5dp"
+            android:background="@drawable/black_border_whitefill_round_20bg"
+            android:elevation="@dimen/dimen5"
+            android:fontFamily="@font/outfit_medium"
+            android:paddingHorizontal="@dimen/dimen_12"
+            android:paddingVertical="@dimen/dimen2"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_8" />
+        <TextView
+            android:id="@+id/tab_nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen5"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_marginEnd="@dimen/dimen5"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:background="@drawable/orangefill_orangeborder_selector"
+            android:paddingHorizontal="@dimen/dimen16"
+            android:paddingVertical="@dimen/dimen_8"
+            android:text=""
+            android:textColor="@color/orange_white_selector" />
+
+    </RelativeLayout>
+</layout>

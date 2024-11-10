@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.fragments.UpcomingTasksFragment">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/no_task_record_tv"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:text="@string/no_response_record"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dimen10"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/gray"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/multi_notification_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen_8"
+                tools:listitem="@layout/notification_list_main_dashboard" />
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen_12"
+        app:cardElevation="@dimen/dimen_8">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen300"
+            android:layout_margin="@dimen/dimen16">
+
+            <ImageView
+                android:id="@+id/cross_history_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/dimen3"
+                android:src="@drawable/ic_cross" />
+
+            <TextView
+                android:id="@+id/history_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Reschedule Detail History"
+                android:textColor="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/historyRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/history_title"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:background="@drawable/gray_dash_border"
+                tools:listitem="@layout/reschedule_history_list_item" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

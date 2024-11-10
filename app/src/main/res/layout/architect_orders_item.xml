@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/architect_order_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_12"
+        android:background="@drawable/gray_border_grayish_fill_bg">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/orderHash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:paddingVertical="@dimen/dimen_8"
+                    android:text="# "
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/dimen16"/>
+                <TextView
+                    android:id="@+id/orderNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/outfit_medium"
+                    android:paddingVertical="@dimen/dimen_8"
+                    android:text="orderNo"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/dimen16" />
+
+                <TextView
+                    android:id="@+id/orderStatus"
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="25dp"
+                    android:background="@drawable/black_round_bg"
+                    android:paddingHorizontal="@dimen/dimen_8"
+                    android:paddingVertical="2dp"
+                    android:text="Assigned"
+                    android:fontFamily="@font/outfit_medium"
+                    android:gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order Date : "
+                    android:textSize="@dimen/dimen14"
+                    android:fontFamily="@font/outfit_regular"
+                    android:textColor="@color/green"/>
+
+                <TextView
+                    android:id="@+id/orderDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/dimen14"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="15 Apr 2024" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:textSize="@dimen/dimen14"
+                android:fontFamily="@font/outfit_regular"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/green"
+                    android:text="Rs. " />
+
+                <TextView
+                    android:id="@+id/orderAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/green"
+                    android:text="25,54,256.00 /-" />
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textColor="@color/green"-->
+<!--                    android:text=" /-" />-->
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

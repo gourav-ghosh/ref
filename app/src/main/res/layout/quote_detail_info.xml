@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_round_bg"
+        android:layout_gravity="bottom"
+        android:id="@+id/lead_detail_page"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grayfill_blackborder_top_roundbg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:paddingVertical="@dimen/dimen_8"
+                    android:text="Product's Response Status"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+
+
+            </RelativeLayout>
+
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:layout_marginBottom="@dimen/dimen20"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/status_tv"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:textSize="16sp"
+                   android:textColor="@color/orange_gray_selector"/>
+               <TextView
+                   android:id="@+id/close_tv"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/dimen50"
+                   android:textColor="@color/white"
+                   android:gravity="center"
+                   android:background="@drawable/orange_round_bg"
+                   android:text="Close"
+                   android:textStyle="bold"
+                   android:textSize="16sp"
+                   android:paddingVertical="@dimen/dimen_4"
+                   android:textAlignment="center"
+                   android:layout_marginHorizontal="@dimen/dimen10"
+                   android:fontFamily="@font/outfit_medium"
+                   android:layout_below="@id/title_tv"/>
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

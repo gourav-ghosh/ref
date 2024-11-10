@@ -1,0 +1,218 @@
+<resources>
+    <string name="app_name">MytylesStockCheck</string>
+    <string name="login_with_mobile_and_otp"><![CDATA[Login with Mobile & OTP]]></string>
+    <string name="login_title_text">Using your registered Mobile Number and password</string>
+    <string name="invalid_credential_text">Your mobile number or password is incorrect. Please enter valid credentials to proceed.</string>
+    <string name="mobile_number">Enter Your Mobile Number</string>
+    <string name="password">Enter Your Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="login">Login</string>
+    <string name="login_with_otp_title">Enter the mobile number associated with your account, an OTP will be sent for verification.</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="already_have_an_account_login">Already have an account ?</string>
+    <string name="login_with_mobile_password"><![CDATA[Login with Mobile & Password]]></string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="back">Back</string>
+    <string name="your_new_password_must_be_different_from_previously_used_password">Your new password must be different from previously used password.</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="save">Save</string>
+    <string name="verify">Verify</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="full_name">Full Name<font color='#FF0000'>*</font></string>
+    <string name="mob_num">Mobile Number<font color='#FF0000'>*</font></string>
+    <string name="firstName">First Name<font color='#FF0000'>*</font></string>
+    <string name="lastName">Last Name<font color='#FF0000'>*</font></string>
+    <string name="allowedDevices">Allowed Devices<font color='#FF0000'>*</font></string>
+    <string name="alternate_num">Alternate Mobile Number</string>
+    <string name="choose_requirement">Choose Requirement<font color='#FF0000'>*</font></string>
+    <string name="select_complain_type">Select Complaint Type<font color='#FF0000'>*</font></string>
+    <string name="sup_exe_name">Support Executive Name<font color='#FF0000'>*</font></string>
+    <string name="select_lead_type">Select Lead Type<font color='#FF0000'>*</font></string>
+    <string name="select_role">Select Role<font color='#FF0000'>*</font></string>
+    <string name="select_vendor_company">Vendor Company<font color='#FF0000'>*</font></string>
+    <string name="vendor_code_title">Vendor Code<font color='#FF0000'>*</font></string>
+    <string name="select_lead_source">Select Lead Source<font color='#FF0000'>*</font></string>
+    <string name="assign_owner">Assign Owner<font color='#FF0000'>*</font></string>
+    <string name="select_lead_ticket_size">Select Lead Ticket Size<font color='#FF0000'>*</font></string>
+    <string name="enter_zipcode">Enter Zipcode</string>
+    <string name="enter_gst">GSTIN/UIN</string>
+    <string name="select_city">Select City</string>
+    <string name="select_city_mandatory">Select City<font color='#FF0000'>*</font></string>
+    <string name="city_mandatory">City<font color='#FF0000'>*</font></string>
+    <string name="select_state">Select State</string>
+    <string name="enter_address_line_1">Address Line 1</string>
+    <string name="enter_address_line_2">Address Line 2</string>
+    <string name="enter_address_line_1I">Address Line 1<font color='#FF0000'>*</font></string>
+    <string name="enter_address_line_2I">Address Line 2<font color='#FF0000'>*</font></string>
+    <string name="enter_zipcodeI">Enter Zipcode<font color='#FF0000'>*</font></string>
+    <string name="enter_gstI">GSTIN/UIN</string>
+    <string name="reason">Reason<font color='#FF0000'>*</font></string>
+    <string name="select_cityI">Select City<font color='#FF0000'>*</font></string>
+    <string name="select_stateI">Select State<font color='#FF0000'>*</font></string>
+    <string name="notes_attachements"><![CDATA[Notes & Attachements]]><font color='#FF0000'>*</font></string>
+    <string name="note">Note<font color='#FF0000'>*</font></string>
+    <string name="exp_no_of_date_for_arrange">Expected no. of days for arrange <font color='#FF0000'>*</font></string>
+    <string name="select_status_of_po">Select the status of PO <font color='#FF0000'>*</font></string>
+    <string name="general_enquiry">Select Lead Stage<font color='#FF0000'>*</font></string>
+    <string name="space"><![CDATA[ ]]></string>
+    <string name="fullname_error_msg">Full Name should not be empty.</string>
+    <string name="mobileno_error_msg">Please enter the primary phone</string>
+    <string name="altmobileno_error_msg">Please enter the secondary phone</string>
+    <string name="requirenment_error_msg">Please select lead requirement.</string>
+    <string name="leadtype_error_msg">Please select lead type.</string>
+    <string name="leadSource_error_msg">Please select lead source.</string>
+    <string name="leadowner_error_msg">Please select lead owner.</string>
+    <string name="select_lead_ticket_size_error_msg">Please select lead ticket size.</string>
+    <string name="addressline1_error_msg">Address Line 1 should not be empty.</string>
+    <string name="addressline2_error_msg">Address Line 2 should not be empty.</string>
+    <string name="city_error_msg">Please enter the valid city.</string>
+    <string name="state_error_msg">Please enter the valid state.</string>
+    <string name="zipcode_error_msg">Please enter the valid pincode as a number.</string>
+    <string name="gst_error_msg">GST number is not allowed to be empty.</string>
+    <string name="note_error_msg">Please enter notes.</string>
+    <string name="manage_quotes">Manage Quotes</string>
+    <string name="delete_txt">Delete</string>
+    <string name="select_customer">Select Customer<font color='#FF0000'>*</font></string>
+    <string name="sales_exec">Sales Executive<font color='#FF0000'>*</font></string>
+    <string name="select_sale_exe">Select Sale Executive<font color='#FF0000'>*</font></string>
+    <string name="billing_address_txt">Billing Address<font color='#FF0000'>*</font></string>
+    <string name="quote_date_txt">Quote Date<font color='#FF0000'>*</font></string>
+    <string name="po_number_txt">PO Number</string>
+    <string name="shippingAddress_txt">Shipping Address<font color='#FF0000'>*</font></string>
+    <string name="add_product">Add Products</string>
+    <string name="rate_txt">Rate</string>
+    <string name="total_amount_txt">Total Amount</string>
+    <string name="we_will_send_you_the_one_time_password_on_your_phone_number">We will send you <b> One Time Password </b>on your phone number</string>
+    <string name="add_more_items">Add More Items</string>
+    <string name="quantity_error_msg">Please enter quantity.</string>
+    <string name="quantity">Quantity<font color='#FF0000'>*</font></string>
+    <string name="bank_details_msg">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document</string>
+    <string name="terms_condition_txt"><![CDATA[Term & Condition]]></string>
+    <string name="terms_condition_msg">1) Unloading needs to be arranged by client at site.\n2) No Return/Exchange / Changes / Alteration allowed in any Material once order is placed. So kindly check the item and quantity properly before placing the order.\n3) We are not responsible for Shortage / breakage of materials once it leaves our warehouse premises. In tiles 2 to 3% damages can be expected during transit and handling which will not be in company?s scope. It can be used in cutting, skirting and wastage. \n4) No complaints will be entertained once tiles are laid. All complaints to be brought to company’s notice before laying / installation. Once purchased materials are installed , we assume that it is inspected and approved by the customer.\n5) For Tiles installation, please use spacers &amp; follow standard installation practice.</string>
+    <string name="change_status">Change Status<font color='#FF0000'>*</font></string>
+    <string name="requirement">Requirement<font color='#FF0000'>*</font></string>
+    <string name="lead_type">Lead Type<font color='#FF0000'>*</font></string>
+    <string name="lead_source">Lead Source<font color='#FF0000'>*</font></string>
+    <string name="lead_owner">Lead Owner<font color='#FF0000'>*</font></string>
+    <string name="subject">Subject<font color='#FF0000'>*</font></string>
+    <string name="schedule_date">Schedule Date<font color='#FF0000'>*</font></string>
+    <string name="schedule_time">Schedule Time<font color='#FF0000'>*</font></string>
+    <string name="task_details">Task Details<font color='#FF0000'>*</font></string>
+    <string name="activity_type">Activity Type<font color='#FF0000'>*</font></string>
+
+
+    <string name="trans_charge_txt">Add transportation charges (₹)</string>
+    <string name="unloading_charge_txt">Add unloading charges (₹)</string>
+    <string name="disc_charge_txt">Discount (%)</string>
+    <string name="siteinchargemob_txt">Site Incharge Mob No.</string>
+    <string name="select_customer_error">Please select customer.</string>
+    <string name="select_sales_error">Please select sales executive.</string>
+    <string name="select_date_error">Please select quote vendorQuoteDetailData.</string>
+    <string name="billing_address_error">Please add billing address.</string>
+    <string name="shipping_address_error">Please add shipping address.</string>
+    <string name="product_error">Please add atleast 1 product.</string>
+    <string name="anyother_ref_txt">Any Other Reference</string>
+    <string name="default_notification_channel_id">com.devstringx.mytylesstockcheck</string>
+    <string name="no_record_found">No Record to Export.</string>
+    <string name="drop_your_sales_order_pdf_here_or_browse">Drop your sales order pdf here , or <font color='#F7941D'>browse</font></string>
+    <string name="drop_your_payment_proofs_here_or_browse">Drop your payment proofs here , or <font color='#F7941D'>browse</font></string>
+    <string name="drop_your_profile_pic_here_or_browse">Drop your profile photo here , or <font color='#F7941D'>browse</font></string>
+    <string name="upload_image_format"><font color='#66728A'><![CDATA[Image format .pdf/.png/.jpeg]]></font></string>
+    <string name="upload_only_image_format"><font color='#66728A'><![CDATA[Image format .png/.jpeg]]></font></string>
+    <string name="upload_media_format"><font color='#66728A'><![CDATA[Media format .pdf/.png/.jpeg/.mp4]]></font></string>
+    <string name="upload_pdf_format"><font color='#66728A'><![CDATA[Pdf format .pdf]]></font></string>
+    <string name="png_jpeg"><font color='#66728A'><![CDATA[Image format .png/.jpeg]]></font></string>
+    <string name="sales_order_number">Sales Order Number<font color='#FF0000'>*</font></string>
+    <string name="sales_order_number_not_mandatetory">Sales Order Number</string>
+    <string name="order_type">Order Type<font color='#FF0000'>*</font></string>
+    <string name="expected_delivery_time">Exp. Delivery Time<font color='#FF0000'>*</font></string>
+    <string name="expected_delivery_time_mandatory">Expected Delivery Time<font color='#FF0000'>*</font></string>
+    <string name="expected_delivery_date">Exp. Delivery Date<font color='#FF0000'>*</font></string>
+    <string name="reason_updation_mandatory">Reason Updation<font color='#FF0000'>*</font></string>
+    <string name="absent_reason_mandatory">Reason <font color='#FF0000'>*</font></string>
+    <string name="work_detail_mandatory">Work Details <font color='#FF0000'>*</font></string>
+    <string name="order_requirement">Order Requirement<font color='#FF0000'>*</font></string>
+    <string name="arrange_before_date">Arrange Before Date<font color='#FF0000'>*</font></string>
+    <string name="customer_name">Customer Name<font color='#FF0000'>*</font></string>
+    <string name="order_amount">Order Amount<font color='#FF0000'>*</font></string>
+    <string name="order_number">Order Number<font color='#FF0000'>*</font></string>
+    <string name="dispatch_manager_name">Dispatch Manager Name<font color='#FF0000'>*</font></string>
+    <string name="customer_mobile_num">Customer Mobile Number<font color='#FF0000'>*</font></string>
+    <string name="sales_person_name">Sales Person Name<font color='#FF0000'>*</font></string>
+    <string name="interior_name"><![CDATA[Architect / Interior Name]]><font color='#FF0000'>*</font></string>
+
+    <string name="error_camera">Cannot open camera</string>
+    <string name="welcome_password_msg">To make your account secure, please create new password to replace the temporary password given on the mobile SMS.</string>
+    <string name="new_password_welcome">New Password<font color='#FF0000'>*</font></string>
+    <string name="confirm_new_password_welcome">Confirm New Password<font color='#FF0000'>*</font></string>
+    <string name="inquiries_not_available_order_placed"><![CDATA[Inquiries Not Available & order placed]]></string>
+    <string name="ticket_no">Ticket No. &quot;4326455&quot;</string>
+    <string name="expected_resolution_date">Expected Resolution Date<font color='#FF0000'>*</font></string>
+    <string name="select_image_to_upload"><font color='#000000'>Select image to </font><font color='#F7941D'>Upload</font></string>
+    <string name="select_media_to_upload"><font color='#000000'>Select media to </font><font color='#F7941D'>Upload</font></string>
+    <string name="select_pdf_to_upload"><font color='#000000'>Select PDF of PO to </font><font color='#F7941D'>Upload</font></string>
+    <string name="payment_proof">Payment Proof<font color='#FF0000'>*</font></string>
+    <string name="mytyle_support">Mytyles Support</string>
+    <string name="no_user_record">No Users to display!</string>
+    <string name="no_lead_record">No Leads to Display!</string>
+    <string name="no_order_record">No Orders to Display!</string>
+    <string name="no_task_record">No Tasks to Display!</string>
+    <string name="no_task_reminders_record">No Task Reminders to Display!</string>
+    <string name="no_shipping_charges_record">No Shipping charges to Display!</string>
+    <string name="no_quote_record">No Quotations to Display!</string>
+    <string name="no_inquiries_record">No Inquiries to Display!</string>
+    <string name="no_response_record">No Responses to Display!</string>
+    <string name="login_pass_error">Your mobile number or password is incorrect. Please enter valid credentials to proceed</string>
+    <string name="no_report_found">No Reports to Display !</string>
+    <string name="pdf_of_so_po"><![CDATA[Pdf of SO & PO]]></string>
+    <string name="hint_delivery_agent"><font color='#858D9D'>Delivery Agent</font></string>
+    <string name="hint_sale_exe"><font color='#858D9D'>Sale Executive</font></string>
+    <string name="hint_architect"><font color='#858D9D'>Architect Name</font></string>
+    <string name="hint_address"><font color='#858D9D'>Address</font></string>
+    <string name="hint_dis_manager"><font color='#858D9D'>Dispatch Manager</font></string>
+    <string name="hint_customer_name"><font color='#858D9D'>Customer Name</font></string>
+    <string name="order_type_mandatory">Order Type<font color='#FF0000'>*</font></string>
+    <string name="delivery_agent_name">Delivery Agent Name</string>
+    <string name="delivery_agent_name_req">Delivery Agent Name<font color='#FF0000'> *</font></string>
+    <string name="delivery_location_mandatory">Delivery Location<font color='#FF0000'>*</font></string>
+    <string name="delivery_location">Delivery Location</string>
+    <string name="select_delivery_mode">Select Delivery Mode<font color='#FF0000'> *</font></string>
+    <string name="select_payer">Who Will Pay Shipping Charge?<font color='#FF0000'> *</font></string>
+    <string name="driver_name">Driver Name<font color='#FF0000'>*</font></string>
+    <string name="specific_mode_name">Specific Mode Name<font color='#FF0000'>*</font></string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="booking_date">Booking Date<font color='#FF0000'>*</font></string>
+    <string name="exp_arrival_date">Exp. Arrival Date<font color='#FF0000'>*</font></string>
+    <string name="issue_from">Issue From!<font color='#FF0000'>*</font></string>
+    <string name="assign_agent">Assign Agent<font color='#FF0000'>*</font></string>
+    <string name="no_history_record">No History to Display!</string>
+    <string name="saveasdraft">Save as Draft</string>
+    <string name="company_name">Company Name<font color='#FF0000'>*</font></string>
+    <string name="select_financial_year">Select Financial Year<font color='#FF0000'>*</font></string>
+    <string name="solution">Solution<font color='#FF0000'>*</font></string>
+    <string name="comment">Comment<font color='#FF0000'>*</font></string>
+    <string name="other_solution">Other Solution<font color='#FF0000'>*</font></string>
+    <string name="reason_for_changing_erd">Reason for changing ERD<font color='#FF0000'>*</font></string>
+    <string name="delivery_agent">Delivery Agent<font color='#FF0000'>*</font></string>
+    <string name="last_name">Last Name<font color='#FF0000'>*</font></string>
+    <string name="zipcode_error_msg2">Pincode must be 6 digit</string>
+    <string name="no_address_record">No Address to Display!</string>
+
+    <string name="so_number">SO Number<font color='#FF0000'>*</font></string>
+    <string name="assign_to">Assign To<font color='#FF0000'>*</font></string>
+    <string name="date">Date<font color='#FF0000'>*</font></string>
+    <string name="time_slot">Time Slot<font color='#FF0000'>*</font></string>
+    <string name="attachment">Attachment<font color='#FF0000'>*</font></string>
+    <string name="time">Time<font color='#FF0000'>*</font></string>
+    <string name="amount_paid">Amount Paid</string>
+    <string name="amount_paid_mandatory">Amount Paid<font color='#FF0000'>*</font></string>
+    <string name="amount_due">Amount Due</string>
+    <string name="payment_mode_mandatory">Payment Mode<font color='#FF0000'>*</font></string>
+    <string name="agent_name">Agent Name<font color='#FF0000'>*</font></string>
+    <string name="l_r_number">L.R. Number<font color='#FF0000'>*</font></string>
+    <string name="distance_covered">Distance Covered (in km.)<font color='#FF0000'>*</font></string>
+    <string name="loading_points">No. Of Loading Points<font color='#FF0000'>*</font></string>
+    <string name="amount">Amount (in INR.)<font color='#FF0000'>*</font></string>
+</resources>

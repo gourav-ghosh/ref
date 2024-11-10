@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/dimen_12"
+        android:layout_marginBottom="@dimen/dimen10"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_medium"
+            android:text="Upload Image"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen16" />
+        <ImageView
+            android:id="@+id/image_dialog_crossIV"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dimen5"
+            android:layout_alignBottom="@id/dialog_title_tv"
+            android:src="@drawable/ic_cross" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:isScrollContainer="true"
+            android:layout_below="@id/dialog_title_tv">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/po_codesRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dimen5"
+                tools:listitem="@layout/po_codes_checkbox_item"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/po_codesRV"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="@dimen/dimen20"
+                        android:background="@drawable/gray_dotted_round5_border"
+                        android:paddingHorizontal="@dimen/dimen_12">
+
+                        <ImageView
+                            android:id="@+id/img_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen16"
+                            android:src="@drawable/ic_cloud_upload"
+                            app:tint="@color/orange" />
+
+                        <TextView
+                            android:id="@+id/select_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_iv"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/outfit_medium"
+                            android:padding="@dimen/dimen_12"
+                            android:text="@string/select_image_to_upload" />
+
+                        <TextView
+                            android:id="@+id/formatTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/select_img"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="@string/upload_image_format" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/field_titleTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen6"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:textSize="@dimen/dimen_12" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/upload_img_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:numColumns="3"
+                    android:visibility="gone"
+                    tools:listitem="@layout/upload_file_info" />
+
+                <TextView
+                    android:id="@+id/dialog_upload_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/green_round_bg"
+                    android:fontFamily="@font/outfit_regular"
+                    android:paddingHorizontal="@dimen/dimen20"
+                    android:paddingVertical="@dimen/dimen6"
+                    android:layout_marginVertical="@dimen/dimen_12"
+                    android:text="Upload"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

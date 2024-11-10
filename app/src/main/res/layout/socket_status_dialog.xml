@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dimen300"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_12"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_12"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/header_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alert !"
+            android:layout_gravity="center"
+            android:textSize="32sp"
+            android:fontFamily="@font/outfit_medium"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do you want to change the status of the task  to completed ?"
+            android:layout_below="@id/header_tv"
+            android:layout_gravity="center"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/outfit_regular"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:layout_marginBottom="@dimen/dimen_12"
+            android:layout_marginTop="@dimen/dimen_12"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/ok_tv"
+                android:layout_width="@dimen/dimen150"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/orange_round_bg"
+                android:text="Yes"
+                android:paddingVertical="@dimen/dimen_4"
+                android:textAlignment="center"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

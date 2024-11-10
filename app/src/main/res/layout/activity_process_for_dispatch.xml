@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.ProcessForDispatchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0D192F">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="Convert to Order"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen16" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/order_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen_8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/delivery_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Select Delivery"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen16" />
+
+                <LinearLayout
+                    android:id="@+id/delivery_linearlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen20"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_8"
+                        android:layout_weight="50"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/pick_up_iv"
+                            android:layout_width="@dimen/dimen25"
+                            android:layout_height="@dimen/dimen25"
+                            android:src="@drawable/orange_checkbox_selected" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen25"
+                            android:layout_height="@dimen/dimen25"
+                            android:layout_marginHorizontal="@dimen/dimen_8"
+                            android:background="@drawable/faded_orange_fill_circle"
+                            android:padding="@dimen/dimen_8"
+                            android:src="@drawable/ic_orange_pick_up_delivery" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/outfit_semibold"
+                            android:text="Pick - Up Delivery"
+                            android:textSize="@dimen/dimen_12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_8"
+                        android:layout_weight="50"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/home_delivery_iv"
+                            android:layout_width="@dimen/dimen25"
+                            android:layout_height="@dimen/dimen25"
+                            android:src="@drawable/orange_checkbox_unselected" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen25"
+                            android:layout_height="@dimen/dimen25"
+                            android:layout_marginHorizontal="@dimen/dimen_8"
+                            android:background="@drawable/light_gray_fill_circle"
+                            android:padding="@dimen/dimen_8"
+                            android:src="@drawable/ic_gray_home_delivery" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/outfit_semibold"
+                            android:text="Home Delivery"
+                            android:textSize="@dimen/dimen_12" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:background="@color/light_grey"
+                    android:hint="@string/sales_order_number"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/sales_order_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:editable="false"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_12"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/sales_order_no_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Sales Order No can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/order_requirement"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:hint="@string/order_requirement"
+                    android:visibility="gone"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/order_requirementACTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen10" />
+
+                    <TextView
+                        android:id="@+id/order_requirement_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Order Requirement can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/delivery_loc"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:hint="@string/delivery_location_mandatory"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/delivery_locET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen10" />
+
+                    <TextView
+                        android:id="@+id/delivery_location_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Delivery Location can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:hint="@string/order_type"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/order_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen10" />
+
+                    <TextView
+                        android:id="@+id/order_type_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Order Type can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/arrange_before_date"
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:hint="@string/arrange_before_date"
+                    android:visibility="visible"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/arrange_before_dateET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_calender"
+                        android:editable="false"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_12" />
+
+                    <TextView
+                        android:id="@+id/arrange_before_date_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Arrange Before Date can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/deliveryTimeLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_8"
+                        android:hint="@string/expected_delivery_date"
+                        android:visibility="visible"
+                        app:expandedHintEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/expected_delivery_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableRight="@drawable/ic_calender"
+                            android:editable="false"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/outfit_regular"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_12" />
+
+                        <TextView
+                            android:id="@+id/exp_delivery_date_cant_be_empty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:text="Exp. Delivery Date can't be empty"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen_12"
+                            android:visibility="gone" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/expected_delivery_time"
+                        android:layout_margin="@dimen/dimen_8"
+                        app:endIconDrawable="@drawable/ic_dropdown"
+                        app:expandedHintEnabled="false">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/expected_delivery_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/outfit_regular"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen10" />
+
+                        <TextView
+                            android:id="@+id/exp_delivery_time_cant_be_empty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:text="Exp. Delivery Time can't be empty"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen_12"
+                            android:visibility="gone" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen100"
+                    android:layout_marginVertical="@dimen/dimen16"
+                    android:layout_margin="@dimen/dimen_8"
+                    >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/instruction_text_input_layout"
+                        style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Instruction"
+                        app:expandedHintEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/instruction_ET"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/outfit_regular"
+                            android:gravity="top"
+                            android:hint="Instruction If Any"
+                            android:maxLines="3"
+                            android:paddingTop="@dimen/dimen20" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/add_link_tv"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen20"
+                        android:layout_alignEnd="@id/instruction_text_input_layout"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="0.5dp"
+                        android:background="@drawable/sea_blue_topright_bottomleft_roundbg"
+                        android:drawableLeft="@drawable/ic_attach_link"
+                        android:fontFamily="@font/outfit_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/dimen_4"
+                        android:text="Add Link"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_8" />
+
+                    <TextView
+                        android:id="@+id/add_media_tv"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen20"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toStartOf="@id/add_link_tv"
+                        android:background="@drawable/sea_blue_bottom_roundbg"
+                        android:drawableLeft="@drawable/ic_attach_media"
+                        android:fontFamily="@font/outfit_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/dimen_4"
+                        android:text="Add Media"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_8" />
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:ellipsize="end"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:hint="@string/customer_name"
+                    android:maxLength="20"
+                    app:expandedHintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/customer_name_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:editable="false"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:paddingVertical="@dimen/dimen_12"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/customer_name_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Customer name can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:background="@color/light_grey"
+                    android:hint="@string/customer_mobile_num"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/customer_mobile_num_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:editable="false"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_12"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/customer_mobile_no_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Customer Mobile Number can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:hint="@string/order_amount"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/order_amount_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:editable="false"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen_12"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/order_amount_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Order Amount can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:hint="@string/interior_name"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/architect_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen10"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/architect_name_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Architect Name can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:hint="@string/dispatch_manager_name"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/dispatch_manager_name_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_regular"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen10"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/dispatch_manager_name_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Dispatch Manager Name can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:focusable="false"
+                    android:hint="@string/sales_person_name"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/sales_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:editable="false"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:padding="@dimen/dimen10"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/sales_person_name_cant_be_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Sales Person Name can't be empty"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen_12"
+                        android:visibility="gone" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/instruction_file_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_12"
+                    android:numColumns="3"
+                    tools:listitem="@layout/instruction_file_info" />
+
+                <LinearLayout
+                    android:id="@+id/is_pickup_ready_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Ready for pick-Up ? "
+                        android:textColor="@color/black" />
+
+                    <androidx.appcompat.widget.AppCompatToggleButton
+                        android:id="@+id/pickup_ready_toggleBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dimen_8"
+                        android:background="@null"
+                        android:button="@drawable/toggle_selector"
+                        android:checked="false"
+                        android:textOff=""
+                        android:textOn="" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/payment_proof"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen16" />
+
+                <LinearLayout
+                    android:id="@+id/chooseFile_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:padding="@dimen/dimen10"
+                    android:background="@drawable/round_gray_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_cloud_upload"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_gravity="center">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="@string/drop_your_payment_proofs_here_or_browse"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/dimen_12" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="@string/upload_image_format"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_12" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/please_attach_proof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_regular"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:text="Please Attach Proof"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dimen_12"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/upload_file_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_12"
+                    android:numColumns="3"
+                    tools:listitem="@layout/upload_file_info" />
+
+                <RelativeLayout
+                    android:id="@+id/upload_payment_proof_RL"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:layout_marginBottom="@dimen/dimen20"
+                    android:background="@drawable/gray_dotted_round_border"
+                    android:padding="@dimen/dimen_12"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/upload_proof_view"
+                            android:layout_width="@dimen/dimen50"
+                            android:layout_height="@dimen/dimen40"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_cloud_upload" />
+
+                        <TextView
+                            android:id="@+id/payment_proof_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/dimen_12"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="@string/drop_your_payment_proofs_here_or_browse" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_medium"
+                            android:text="@string/upload_image_format"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:hint="Comment"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/commentET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_regular"
+                        android:gravity="top"
+                        android:hint="Comment If Any..."
+                        android:maxLines="3"
+                        android:paddingTop="@dimen/dimen20" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginVertical="@dimen/dimen20"
+                    android:layout_marginBottom="@dimen/dimen16"
+                    android:paddingVertical="@dimen/dimen_8">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/dimen_8"
+                        android:background="@drawable/black_border_round_bg"
+                        android:fontFamily="@font/outfit_semibold"
+                        android:text="Cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darker_Blue" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/dimen_8"
+                        android:background="@drawable/orange_round_bg"
+                        android:fontFamily="@font/outfit_semibold"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:text="Process For Dispatched"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        </FrameLayout>
+    </LinearLayout>
+
+</layout>

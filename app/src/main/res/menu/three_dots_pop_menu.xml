@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/edit_lead"
+        android:title="Edit Lead" />
+    <item
+        android:id="@+id/add_task"
+        android:title="Add Tasks" />
+    <item
+        android:id="@+id/update_lead_stage"
+        android:title="Update Lead Stage" />
+</menu>

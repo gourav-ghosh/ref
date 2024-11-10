@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen10"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen40"
+        android:gravity="center_vertical"
+        android:text="@string/total_amount_txt"
+        android:id="@+id/titleTv"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/total_amount_txt"
+        android:id="@+id/msgTv"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen50"
+        android:layout_marginTop="@dimen/dimen20"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/no_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="NO"
+            android:paddingLeft="@dimen/dimen20"
+            android:paddingRight="@dimen/dimen20"
+            android:background="@drawable/black_border_round_bg"
+            android:fontFamily="@font/outfit_medium"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/yes_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="YES"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/dimen20"
+            android:paddingRight="@dimen/dimen20"
+            android:background="@drawable/orange_round_bg10"
+            android:fontFamily="@font/outfit_medium"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>

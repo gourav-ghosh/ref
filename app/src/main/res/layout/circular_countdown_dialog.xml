@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/transparent">
+
+        <ProgressBar
+            android:id="@+id/view_progress_bar"
+            style="@style/Widget.Material3.CircularProgressIndicator"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/transparent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:progressDrawable="@drawable/countdoun_circular_progress_bar"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_timer"
+            android:fontFamily="@font/ds_digi"
+            android:textSize="@dimen/dimen_48"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/edit_response_tv"
+            android:layout_width="@dimen/dimen100"
+            android:layout_height="@dimen/dimen_60"
+            android:layout_below="@id/view_progress_bar"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:layout_marginEnd="@dimen/dimen_12"
+            android:layout_marginBottom="@dimen/dimen_12"
+            android:background="@drawable/orange_round_20bg"
+            android:fontFamily="@font/outfit_regular"
+            android:paddingHorizontal="@dimen/dimen_12"
+            android:text="Edit response"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12"/>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen3"
+        android:elevation="@dimen/dimen40">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen80"
+            android:id="@+id/user_item_ll"
+            android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingEnd="@dimen/dimen_4"
+            android:layout_weight="80"
+            android:paddingLeft="@dimen/dimen10"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen40"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen20"
+                    android:src="@drawable/profile_bg"/>
+                <TextView
+                    android:id="@+id/tile_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:text="Leela kamal"
+                    android:fontFamily="@font/outfit_regular"
+                    android:textColor="@color/gray"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen40"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="@dimen/dimen40"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dimen20"
+                        android:layout_height="@dimen/dimen20"
+                        android:padding="@dimen/dimen5"
+                        android:src="@drawable/ic_call"/>
+                    <TextView
+                        android:id="@+id/tile_number_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:paddingLeft="@dimen/dimen10"
+                        android:text="9876567865"
+                        android:fontFamily="@font/outfit_regular"
+                        android:textColor="@color/gray"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="@dimen/dimen40"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dimen20"
+                        android:layout_height="@dimen/dimen20"
+                        android:padding="@dimen/dimen5"
+                        android:src="@drawable/ic_calendar"/>
+                    <TextView
+                        android:id="@+id/tile_date_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:paddingLeft="@dimen/dimen10"
+                        android:text="Leela kamal"
+                        android:fontFamily="@font/outfit_regular"
+                        android:textColor="@color/gray"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/dimen10"
+                android:layout_marginEnd="@dimen/dimen5"
+                android:layout_weight="20"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:id="@+id/status_ll"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dimen10"
+                        android:layout_height="@dimen/dimen10"
+                        android:id="@+id/status_iv"/>
+
+                    <TextView
+                        android:id="@+id/status_tv"
+                        android:layout_width="wrap_content"
+                        android:maxLines="1"
+                        android:text="Activite"
+                        android:layout_marginLeft="@dimen/dimen10"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:textColor="@color/gray"/>
+
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen25"
+                    android:layout_height="@dimen/dimen25"
+                    android:tint="@color/black"
+                    android:padding="@dimen/dimen5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_three_dots_white"
+                    android:id="@+id/menu_iv"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

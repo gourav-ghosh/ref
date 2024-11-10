@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/dimen_8"
+        android:id="@+id/item_view"
+        android:background="@drawable/rectangle_divider"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/faded_orangefill_round_border_8bg_1dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen10"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="35">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="SO "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/order_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="#23456"
+                    android:textColor="@color/orange" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/date_time_TV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_weight="65"
+                android:fontFamily="@font/outfit_medium"
+                android:text="2 Dec 2023,08:48pm"
+                android:textSize="@dimen/dimen_12"
+                tools:ignore="RtlCompat" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-1dp"
+
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/assigned_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Assigned To: "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/assigned_toTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/assigned_to"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12"
+                    tools:text="A-Mytyles" />
+
+                <TextView
+                    android:id="@+id/deadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:text="Deadline" />
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/assigned_to"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Comment "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_12" />
+                <TextView
+                    android:id="@+id/comment_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/assigned_to"
+                    android:layout_toEndOf="@id/comment"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12"
+                    tools:text="" />
+                <TextView
+                    android:id="@+id/deadline_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/deadline"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="9 Dec 2023,8:48pm"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_12" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

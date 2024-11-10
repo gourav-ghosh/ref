@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/order_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dimen_12"
+        app:cardElevation="@dimen/dimen_12"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen_8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/orange_round_border_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/faded_orangefill_round_border_8bg"
+                android:orientation="horizontal"
+                android:weightSum="100">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:rotation="270">
+
+                        <TextView
+                            android:id="@+id/delayedRL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delay"
+                            android:fontFamily="@font/outfit_regular"
+                            android:textStyle="bold"
+                            android:minWidth="@dimen/dimen10"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen10"/>
+                    </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="35">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Order ID "
+                        android:layout_marginVertical="@dimen/dimen10"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="#23456"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/orange" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/date_time_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="40"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="2 Dec 2023,08:48pm"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_12"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="25"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Outstation"
+                    android:layout_marginEnd="@dimen/dimen10"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/dimen_12"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen10">
+
+                <TextView
+                    android:id="@+id/customer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Customer Name: "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/customer_nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/customer_name"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Rakesh"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12" />
+
+
+                <TextView
+                    android:id="@+id/delivery_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/customer_name"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Delivery "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/delivery_typeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/customer_name"
+                    android:layout_toEndOf="@id/delivery_type"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="home"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/completeBefore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/delivery_type"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Complete Before : "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/completeBeforeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/delivery_type"
+                    android:layout_toEndOf="@id/completeBefore"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="21 Dec-2nd Half"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/sales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/completeBefore"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Sale Executive : "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/sales_exeTV"
+                    android:layout_width="@dimen/dimen120"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/completeBefore"
+                    android:layout_toEndOf="@id/sales"
+                    android:fontFamily="@font/outfit_medium"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="John Bushmill"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12" />
+                <TextView
+                    android:id="@+id/delivery_agent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sales"
+                    android:layout_marginBottom="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Delivery Agent: "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/delivery_agentTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sales"
+                    android:layout_toEndOf="@id/delivery_agent"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="M Karim"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/Created_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/light_orange_round_bg"
+                    android:fontFamily="@font/outfit_medium"
+                    android:paddingHorizontal="@dimen/dimen10"
+                    android:paddingVertical="@dimen/dimen3"
+                    android:text="Loading"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/date_time_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Created_tag"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="09 Dec 2022 , 08:00pm"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen10" />
+
+                <TextView
+                    android:id="@+id/payment_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date_time_right"
+                    android:layout_marginEnd="@dimen/dimen3"
+                    android:layout_marginBottom="@dimen/dimen3"
+                    android:layout_toStartOf="@id/payment_statusTV"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Payment Status: "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen10" />
+
+                <TextView
+                    android:id="@+id/payment_statusTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date_time_right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="@dimen/dimen3"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Paid"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen10" />
+
+                <TextView
+                    android:id="@+id/mytyles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date_time_right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="@dimen/dimen3"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Mytyles"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen10"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/payment_status"
+                    android:layout_marginEnd="@dimen/dimen3"
+                    android:layout_marginBottom="@dimen/dimen3"
+                    android:layout_toStartOf="@id/amountTv"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Amount: "
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen10" />
+
+                <TextView
+                    android:id="@+id/amountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/payment_statusTV"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="@dimen/dimen3"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="1000/-"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dimen10"
+                    android:visibility="visible"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/commentIV"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="@dimen/dimen5"
+                    android:layout_below="@id/amountTv"
+                    android:layout_toStartOf="@id/locIV"
+                    android:layout_marginEnd="@dimen/dimen_8"
+                    android:src="@drawable/ic_coment"
+                    app:tint="@color/black" />
+                <ImageView
+                    android:id="@+id/locIV"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="@dimen/dimen5"
+                    android:layout_below="@id/amountTv"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_loc"
+                    app:tint="@color/black" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

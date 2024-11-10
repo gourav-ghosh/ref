@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen3"
+        android:elevation="@dimen/dimen40"
+        app:cardCornerRadius="@dimen/dimen10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_lightgray_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dimen5"
+                    android:paddingBottom="@dimen/dimen5"
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="55"
+                        android:orientation="horizontal"
+                        android:weightSum="50">
+
+                        <View
+                            android:id="@+id/dot_view"
+                            android:layout_width="@dimen/dimen15"
+                            android:layout_height="@dimen/dimen15"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dimen10"
+                            android:background="@drawable/green_dot" />
+
+                        <TextView
+                            android:id="@+id/inquiry_status_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_8"
+                            android:layout_toRightOf="@id/dot_view"
+                            android:fontFamily="@font/outfit_regular"
+                            android:text="Text"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/dimen_8"
+                        android:layout_weight="45"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/date_time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:fontFamily="@font/outfit_regular"
+                            android:text="date__time"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_12" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/inquiry_number"
+                    android:weightSum="100">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen10"
+                        android:layout_marginLeft="@dimen/dimen5"
+                        android:layout_marginBottom="@dimen/dimen10"
+                        app:cardCornerRadius="@dimen/dimen10">
+
+                        <ImageView
+                            android:id="@+id/tiles_iv"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/white_round_10bg" />
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:paddingVertical="@dimen/dimen_8">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:weightSum="100">
+
+                            <LinearLayout
+                                android:id="@+id/responded_inquiries_cv"
+                                android:layout_width="0dp"
+                                android:layout_height="70dp"
+                                android:layout_weight="55"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tile_detail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:maxLength="15"
+                                    android:maxLines="2"
+                                    android:text=""
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:id="@+id/tile_code"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/outfit_medium"
+                                    android:maxLength="15"
+                                    android:maxLines="2"
+                                    android:text="Code"
+                                    android:textColor="@color/gray" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="40"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen10"
+                                android:layout_toRightOf="@id/tile_detail"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="@dimen/dimen_8"
+                                    android:orientation="horizontal">
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.03"
+                                        android:background="@color/black" />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="70dp"
+                                        android:layout_marginStart="@dimen/dimen5"
+                                        android:layout_weight="1.5"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tile_uom"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:text="Qty (Box)"
+                                            android:textColor="@color/gray"
+                                            android:textSize="@dimen/dimen_12" />
+
+                                        <TextView
+                                            android:id="@+id/tiles_qty_tv"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/tile_detail"
+                                            android:layout_marginTop="@dimen/dimen5"
+                                            android:layout_marginStart="@dimen/dimen5"
+                                            android:layout_marginBottom="@dimen/dimen5"
+                                            android:fontFamily="@font/outfit_regular"
+                                            android:paddingLeft="@dimen/dimen10"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/dimen_12" />
+
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:id="@+id/copy"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/vector"
+                                        android:clickable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:visibility="gone">
+
+                                    </ImageView>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/main_divider_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/linear_layout_image"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_marginStart="@dimen/dimen20"
+                android:layout_marginEnd="@dimen/dimen20"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/main_divider_view"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginBottom="@dimen/dimen_8"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_weight="3.75"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dimen2"
+                    android:textSize="@dimen/dimen_12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Iquiry_No."
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/dimen_12" />
+
+                    <TextView
+                        android:id="@+id/inquiry_number_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tile_detail"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.04"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_weight="3.75"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dimen2"
+                    android:textSize="@dimen/dimen_12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Responded By"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/dimen_12" />
+
+                    <TextView
+                        android:id="@+id/responded_by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tile_detail"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_weight="3.75"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/dimen2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_regular"
+                        android:text="Responded in"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/dimen_12" />
+
+                    <TextView
+                        android:id="@+id/responded_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tile_detail"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_12" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

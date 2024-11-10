@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".screens.vendor.fragment.InquiriesFilterQuantityFragment">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_8"
+            android:fontFamily="@font/outfit_medium"
+            android:text="Quantity"
+            android:textColor="@color/gray"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/inquiry_filter_qty_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_border_round4dp"
+            android:hint="Enter Quantity"
+            android:textSize="@dimen/dimen_12"
+            android:fontFamily="@font/outfit_regular"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:padding="@dimen/dimen_8">
+        </EditText>
+
+    </LinearLayout>
+
+
+</layout>

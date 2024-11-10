@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><!-- res/drawable/custom_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:layout_width="match_parent" android:layout_height="match_parent">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/faded_orange" />
+                </shape>
+            </item>
+            <item android:width="@dimen/dimen_8" android:gravity="start">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/orange" />
+                    <corners android:bottomRightRadius="@dimen/dimen_12" android:topRightRadius="@dimen/dimen_12"></corners>
+
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:layout_width="match_parent" android:layout_height="match_parent">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/faded_orange" />
+                </shape>
+            </item>
+            <item android:width="@dimen/dimen_8" android:gravity="start">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/orange" />
+                    <corners android:bottomRightRadius="@dimen/dimen_12" android:topRightRadius="@dimen/dimen_12"></corners>
+
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

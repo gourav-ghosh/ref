@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refresh_ll">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".screens.fragments.AllLeadsFragment">
+
+            <TextView
+                android:id="@+id/no_lead_record_tv"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:text="@string/no_lead_record"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dimen10"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/gray"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/all_leads_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/lead_list_item"></androidx.recyclerview.widget.RecyclerView>
+            <LinearLayout
+                android:layout_width="@dimen/dimen45"
+                android:layout_height="@dimen/dimen45"
+                android:layout_above="@+id/add_lead"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen20"
+                android:id="@+id/export_ll"
+                android:background="@drawable/faded_orange_fill_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen30"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:tint="@color/orange"
+                    android:src="@drawable/ic_export" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/add_lead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:layout_marginEnd="@dimen/dimen_12"
+                android:layout_marginBottom="@dimen/dimen_12"
+                android:elevation="@dimen/dimen_48"
+                android:src="@drawable/ic_add" />
+
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

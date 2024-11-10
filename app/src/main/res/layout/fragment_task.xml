@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refresh_ll">
+        <RelativeLayout
+            android:id="@+id/taskFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/no_task_record_tv"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:text="@string/no_task_record"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dimen10"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_medium"
+                android:textColor="@color/gray"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/task_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:context=".screens.fragments.TaskFragment"
+                tools:listitem="@layout/all_task_rv_list"/>
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

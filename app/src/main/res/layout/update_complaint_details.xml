@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/faded_orange"
+            android:paddingHorizontal="@dimen/dimen_12"
+            android:paddingVertical="@dimen/dimen_12">
+
+            <TextView
+                android:id="@+id/dialog_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/outfit_regular"
+                android:textColor="@color/orange"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/dimen16" />
+
+            <ImageView
+                android:id="@+id/close_dialog"
+                android:layout_width="@dimen/dimen30"
+                android:layout_height="@dimen/dimen30"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/dimen5"
+                android:src="@drawable/ic_cross" />
+        </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/show_comment_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_12"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/commentTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            android:fontFamily="@font/outfit_regular"
+            android:minHeight="@dimen/dimen80"
+            android:textColor="@color/black"
+            android:padding="@dimen/dimen_8"
+            android:textSize="@dimen/dimen_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/change_resolution_date_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_12"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/expected_delivery_date"
+            android:visibility="visible"
+            app:expandedHintEnabled="false">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/expected_delivery_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_calender"
+                android:editable="false"
+                android:ellipsize="end"
+                android:fontFamily="@font/outfit_regular"
+                android:gravity="top"
+                android:paddingVertical="@dimen/dimen6" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen10"
+            android:hint="@string/reason_for_changing_erd"
+            app:expandedHintEnabled="false">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/reasonET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/outfit_regular"
+                android:gravity="top"
+                android:hint="Reason goes here..."
+                android:minHeight="80dp"
+                android:padding="@dimen/dimen6" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/updateCustomerDetailsLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_12"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_4"
+            android:hint="@string/customer_name"
+            app:expandedHintEnabled="false">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/customerNameET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/outfit_regular"
+                android:maxLines="1"
+                android:padding="@dimen/dimen6"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen10"
+            android:hint="@string/customer_mobile_num"
+            app:expandedHintEnabled="false">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/customer_mobilenoET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/outfit_regular"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="@dimen/dimen6" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/delivery_agentLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_12"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/agentInput"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginVertical="@dimen/dimen_12"
+            android:hint="@string/delivery_agent"
+            app:endIconDrawable="@drawable/ic_dropdown"
+            app:expandedHintEnabled="false">
+
+            <AutoCompleteTextView
+                android:id="@+id/delivery_agent_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/outfit_regular"
+                android:inputType="none"
+                android:paddingVertical="@dimen/dimen6"
+                android:textSize="@dimen/dimen_12" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cost_to_mytylesLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_12"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen10"
+            android:hint="Cost to Mytyles"
+            app:expandedHintEnabled="false">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/cost_to_mytylesET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/outfit_regular"
+                android:inputType="number"
+                android:padding="@dimen/dimen6" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dimen20"
+        android:background="@drawable/green_round_bg"
+        android:paddingHorizontal="@dimen/dimen16"
+        android:paddingVertical="@dimen/dimen6"
+        android:text="Update"
+        android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

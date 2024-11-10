@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".screens.fragments.ComplaintDetailsTabFragment">
+
+        <TextView
+            android:id="@+id/orderNumTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:paddingHorizontal="@dimen/dimen_12"
+            android:fontFamily="@font/outfit_medium"
+            android:text="Order #16732"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:layout_marginVertical="@dimen/dimen5"
+            android:orientation="horizontal"
+            android:weightSum="100">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="50">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_border_user"
+                android:drawablePadding="@dimen/dimen5"
+                android:drawableTint="@color/gray"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Customer Name"
+                android:textColor="@color/gray" />
+            <ImageView
+                android:id="@+id/edit_customer_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dimen10"
+                android:src="@drawable/ic_border_pencil" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/customer_name_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/outfit_medium"
+                android:maxLines="1"
+                android:text="xyz"
+                android:textColor="@color/black" />
+                <ImageView
+                    android:id="@+id/callCustomer_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:src="@drawable/ic_phone_call"
+                    app:tint="@color/green" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:layout_marginVertical="@dimen/dimen5"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:drawableStart="@drawable/ic_issue"
+                android:drawablePadding="@dimen/dimen5"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Issue From"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/issue_from_TV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:ellipsize="end"
+                android:fontFamily="@font/outfit_medium"
+                android:maxLines="1"
+                android:text="xyz"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:layout_marginVertical="@dimen/dimen5"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:drawableStart="@drawable/ic_caution"
+                android:drawablePadding="@dimen/dimen5"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Solution"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/replacement_by_TV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:fontFamily="@font/outfit_medium"
+                android:text="xyz"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:layout_marginVertical="@dimen/dimen5"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:drawableStart="@drawable/ic_border_calender"
+                android:drawablePadding="@dimen/dimen5"
+                android:drawableTint="@color/gray"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Complaint Date,Time"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/date_time_TV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:fontFamily="@font/outfit_medium"
+                android:text="xyz"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:layout_marginVertical="@dimen/dimen5"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_border_calender"
+                    android:drawablePadding="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="ERD"
+                    android:textColor="@color/gray" />
+
+                <ImageView
+                    android:id="@+id/edit_erd_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:src="@drawable/ic_border_pencil"
+                    app:tint="@color/orange" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/erd_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen20"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="xyz"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/view_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:src="@drawable/ic_eye_border"
+                    app:tint="@color/orange" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:layout_marginVertical="@dimen/dimen5"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:drawableStart="@drawable/ic_complaint_type"
+                android:drawablePadding="@dimen/dimen5"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Complaint Type"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/complaint_type_TV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:fontFamily="@font/outfit_medium"
+                android:text="xyz"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/costLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:layout_marginVertical="@dimen/dimen5"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_rupee"
+                    android:drawableTint="@color/gray"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Cost To Mytyles"
+                    android:textColor="@color/gray" />
+
+                <ImageView
+                    android:id="@+id/edit_cost_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:src="@drawable/ic_border_pencil" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cost_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen20"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="xyz"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/vendorLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_person_border"
+                        android:drawablePadding="@dimen/dimen5"
+                        android:drawableTint="@color/gray"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="Vendor Name"
+                        android:textColor="@color/gray" />
+
+                    <ImageView
+                        android:id="@+id/edit_vendor_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dimen10"
+                        android:src="@drawable/ic_border_pencil"
+                        app:tint="@color/orange" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50">
+
+                    <TextView
+                        android:id="@+id/vendorNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dimen20"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="xyz"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/agentLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:layout_marginVertical="@dimen/dimen5"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_person_border"
+                    android:drawablePadding="@dimen/dimen5"
+                    android:drawableTint="@color/gray"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Agent Assigned"
+                    android:textColor="@color/gray" />
+
+                <ImageView
+                    android:id="@+id/edit_agent_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:src="@drawable/ic_border_pencil"
+                    app:tint="@color/orange" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50">
+
+                    <TextView
+                        android:id="@+id/agentNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dimen20"
+                        android:fontFamily="@font/outfit_medium"
+                        android:text="xyz"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/callAgent_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dimen10"
+                        android:src="@drawable/ic_phone_call"
+                        app:tint="@color/green" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:drawableStart="@drawable/ic_support"
+                    android:drawablePadding="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Support Executive"
+                    android:textColor="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/supportExeNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="xyz"
+                    android:textColor="@color/black" />
+                <ImageView
+                    android:id="@+id/callSupport_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:src="@drawable/ic_phone_call"
+                    app:tint="@color/green" />
+
+            </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:drawableStart="@drawable/ic_sales_exe"
+                    android:drawablePadding="@dimen/dimen5"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Sale Executive"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/salesExeNameTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="xyz"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:layout_marginVertical="@dimen/dimen5"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:drawableLeft="@drawable/ic_phone_call"
+                    android:drawablePadding="@dimen/dimen5"
+                    android:drawableTint="@color/gray"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Mobile Number"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/salesExeMobileTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="xyz"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/initialMessageLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_12"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:drawableLeft="@drawable/ic_mail"
+                    android:drawablePadding="@dimen/dimen5"
+                    android:drawableTint="@color/gray"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Initial message"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/initial_msg_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen30"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Lorem ipsum dolor sit amet consectetur. Mi pretium ut suscipit blandit. Tellus iaculis cursus tincidunt scelerisque risus elit gravida. Massa sit volutpat quis purus et velit sit mauris. "
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/resolutionLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_12"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:drawableLeft="@drawable/ic_mail"
+                    android:drawablePadding="@dimen/dimen5"
+                    android:drawableTint="@color/gray"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Resolution message"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/resolution_msgTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen30"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Lorem ipsum dolor sit amet consectetur. Mi pretium ut suscipit blandit. Tellus iaculis cursus tincidunt scelerisque risus elit gravida. Massa sit volutpat quis purus et velit sit mauris. "
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

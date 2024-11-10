@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8"
+        android:outlineSpotShadowColor="@color/orange"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen_12"
+        app:cardElevation="@dimen/dimen_12">
+
+        <ImageView
+            android:id="@+id/cross_on_diaog"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/dimen_12"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_cross" />
+
+        <RelativeLayout
+            android:id="@+id/generatge_link_RL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_12"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/dialog_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_12"
+                android:fontFamily="@font/outfit_medium"
+                android:text="Generate New Link"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sales_order_number"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_title_tv"
+                android:layout_marginVertical="@dimen/dimen10"
+                android:hint="@string/sales_order_number_not_mandatetory"
+                app:expandedHintEnabled="false">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/sales_order_numberET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen_12" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/order_amount"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sales_order_number"
+                android:layout_marginVertical="@dimen/dimen10"
+                android:hint="@string/order_amount"
+                app:expandedHintEnabled="false">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/order_amountET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen_12" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/order_amount"
+                android:paddingVertical="@dimen/dimen_8">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cancel_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:layout_toStartOf="@id/create_link_dialog"
+                    android:background="@drawable/black_border_round_bg"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darker_Blue" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/create_link_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:background="@drawable/orange_round_bg"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Create"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/success_dialog_RL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_12"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="@dimen/dimen_12"
+                android:background="@drawable/ic_verification_greenbg_white_tick" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:text="Razorepay Link Generated Successfully"
+                android:textAlignment="center"
+                android:textColor="@color/green" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text"
+                android:layout_margin="@dimen/dimen_12"
+                android:background="@drawable/gray_border_round4dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/link_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen20"
+                    android:textColor="@color/sea_blue"
+                    android:textSize="@dimen/dimen_12" />
+
+                <ImageView
+                    android:id="@+id/link_share_whatsapp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_8"
+                    android:layout_toStartOf="@id/copy_link"
+                    android:layout_weight="10"
+                    android:padding="@dimen/dimen3"
+                    android:src="@drawable/ic_whatsapp" />
+
+                <ImageView
+                    android:id="@+id/copy_link"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_8"
+                    android:layout_weight="10"
+                    android:padding="@dimen/dimen5"
+                    android:src="@drawable/ic_gray_copy" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

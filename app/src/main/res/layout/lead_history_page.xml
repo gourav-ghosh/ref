@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/lead_history_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="400dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/no_record_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen200"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:fontFamily="@font/outfit_medium"
+            android:text="@string/no_history_record"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lead_history_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dimen16">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+</layout>

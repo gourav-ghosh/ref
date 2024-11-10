@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen16"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Razorpay Link"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen16" />
+
+                <TextView
+                    android:id="@+id/create_link"
+                    android:layout_width="@dimen/dimen40"
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_marginEnd="@dimen/dimen16"
+                    android:layout_toStartOf="@id/filter_razorpay"
+                    android:background="@drawable/ic_add"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+                <ImageView
+                    android:id="@+id/filter_razorpay"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_filter" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:layout_margin="@dimen/dimen_12"
+                android:background="@drawable/black_border_round_bg"
+                android:paddingLeft="@dimen/dimen10"
+                android:paddingRight="@dimen/dimen10">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/searchET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/ic_search"
+                    android:drawableTint="@color/orange"
+                    android:hint="Search"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:outlineSpotShadowColor="@color/orange"
+                app:cardCornerRadius="@dimen/dimen16"
+                app:cardElevation="@dimen/dimen_8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen_12">
+
+                    <RelativeLayout
+                        android:id="@+id/progressBarRL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <com.google.android.material.progressindicator.CircularProgressIndicator
+                            android:id="@+id/progressBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:progress="40"
+                            app:indicatorColor="@color/orange"
+                            app:indicatorSize="160dp"
+                            app:trackColor="@color/green"
+                            app:trackCornerRadius="10dp"
+                            app:trackThickness="10dp" >
+
+                        </com.google.android.material.progressindicator.CircularProgressIndicator>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/total_amount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/outfit_medium"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/total_amount_tv"
+                                android:layout_marginTop="@dimen/dimen5"
+                                android:fontFamily="@font/outfit_medium"
+                                android:maxLines="1"
+                                android:text="Total Amount"
+                                android:textAlignment="center"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/dimen14" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/progressBarRL"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/pending_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/dimen_12"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:background="@drawable/orange_dot" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_12"
+                                android:fontFamily="@font/outfit_medium"
+                                android:text="Pending - "
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/dimen_12" />
+
+                            <TextView
+                                android:id="@+id/pending_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/outfit_medium"
+                                android:text="12"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/dimen_12" />
+
+                            <TextView
+                                android:id="@+id/pending_amount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_12"
+                                android:fontFamily="@font/outfit_medium"
+                                android:text="1234.00/-"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_12" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/paid_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/pending_ll"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/dimen_12"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:background="@drawable/green_dot" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_12"
+                                android:fontFamily="@font/outfit_medium"
+                                android:text="Paid - "
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/dimen_12" />
+
+                            <TextView
+                                android:id="@+id/paid_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/outfit_medium"
+                                android:text="5"
+                                android:textColor="@color/green"
+                                android:textSize="@dimen/dimen_12" />
+
+                            <TextView
+                                android:id="@+id/paid_amount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_12"
+                                android:fontFamily="@font/outfit_medium"
+                                android:text="1234.00/-"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/item_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/razorpay_list_item">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

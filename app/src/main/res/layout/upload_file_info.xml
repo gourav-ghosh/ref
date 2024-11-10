@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dimen100"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/file_iv"
+                android:layout_width="@dimen/dimen100"
+                android:layout_height="@dimen/dimen100"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen10"
+                android:layout_marginTop="@dimen/dimen10"
+                android:layout_marginEnd="@dimen/dimen10"
+                android:layout_marginBottom="@dimen/dimen10"
+                android:src="@drawable/ic_attachment" />
+            <RelativeLayout
+                android:id="@+id/file_count_ll"
+                android:layout_width="@dimen/dimen100"
+                android:layout_height="@dimen/dimen100"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen10"
+                android:layout_marginTop="@dimen/dimen10"
+                android:layout_marginEnd="@dimen/dimen10"
+                android:elevation="@dimen/dimen10"
+                android:background="@drawable/semi_dark_background"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/dimen10">
+
+                <TextView
+                    android:id="@+id/file_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5+"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen30"
+                    android:fontFamily="@font/outfit_regular"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/delete_iv"
+                android:layout_width="@dimen/dimen40"
+                android:layout_height="@dimen/dimen40"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:padding="@dimen/dimen5"
+                android:src="@drawable/ic_remove_img" />
+            <ImageView
+                android:id="@+id/check_iv"
+                android:layout_width="@dimen/dimen20"
+                android:layout_height="@dimen/dimen20"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen10"
+                android:layout_marginEnd="@dimen/dimen10"
+                android:visibility="gone"
+                android:background="@drawable/orange_checkbox_unselected" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="file.jpeg"
+                android:textSize="6dp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oct 23, 2023 12:09 pm"
+                android:textSize="6dp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

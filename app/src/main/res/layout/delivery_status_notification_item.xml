@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/order_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_12"
+        android:layout_marginVertical="@dimen/dimen5"
+        android:layout_marginHorizontal="@dimen/dimen_12"
+        android:elevation="@dimen/dimen5"
+        app:cardBackgroundColor="@color/very_light_bluish"
+        app:cardCornerRadius="@dimen/dimen_12">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen16"
+                android:layout_marginBottom="@dimen/dimen5"
+                android:fontFamily="@font/outfit_semibold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_grayish_round_bg" />
+                <TextView
+                    android:id="@+id/bodyTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_regular"
+                    android:layout_marginStart="@dimen/dimen5"
+                    android:maxLines="3"
+                    android:textSize="@dimen/dimen14"
+                    android:text="sads"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen5"
+                android:textSize="@dimen/dimen_12"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/outfit_regular" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

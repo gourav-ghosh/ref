@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_round_bg"
+        android:layout_gravity="bottom"
+        android:id="@+id/lead_detail_page"
+        android:paddingBottom="@dimen/dimen10"
+        android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/faded_orangefill_round_border_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_8">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_filter"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sort By"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/orange"
+                    />
+            </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dimen20"
+                android:paddingTop="@dimen/dimen20">
+                <TextView
+                    android:id="@+id/todayTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen40"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/orange_white_selector"
+                    android:button="@null"
+                    android:paddingLeft="@dimen/dimen25"
+                    android:text="Today Tasks"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/orange_gray_selector"/>
+
+                <TextView
+                    android:id="@+id/overdue"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen40"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/orange_white_selector"
+                    android:button="@null"
+                    android:paddingLeft="@dimen/dimen25"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Overdue Tasks"
+                    android:textColor="@color/orange_gray_selector"/>
+
+                <TextView
+                    android:id="@+id/upcoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen40"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/orange_white_selector"
+                    android:button="@null"
+                    android:paddingLeft="@dimen/dimen25"
+                    android:text="Upcoming Tasks"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/orange_gray_selector"/>
+
+            </LinearLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/no_lead_task"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="No task leads"-->
+<!--            android:layout_margin="@dimen/dimen_8"-->
+<!--            android:fontFamily="@font/outfit_medium"-->
+<!--            android:textColor="@color/gray"-->
+<!--            ></TextView>-->
+    </LinearLayout>
+</layout>

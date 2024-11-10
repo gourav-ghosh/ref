@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".startup.LoginWithPasswordActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/title_img"
+                    android:layout_width="159dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="@dimen/dimen_8"
+                    android:src="@drawable/ic_title_logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60dp"
+                    android:text="Login to MyTyles Stock Check"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/outfit_semibold"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mob_pwd_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="@string/login_title_text"
+                    android:textColor="@color/gray"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/credential_error_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/invalid_credential_text"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textSize="10dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/mobile_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen16"
+                    android:fontFamily="@font/outfit_medium"
+                    android:paddingVertical="4dp"
+                    android:text="@string/mobile_number"
+                    android:textColor="@color/gray"
+                    android:textSize="12dp" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    android:gravity="center"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:background="@drawable/round_gray_border">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mobileEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_60"
+                        android:digits="1234567890"
+                        android:inputType="phone"
+                        android:fontFamily="@font/outfit_regular"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        android:background="@android:color/transparent" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/password_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:paddingVertical="4dp"
+                    android:text="@string/password"
+                    android:textColor="@color/gray"
+                    android:textSize="12dp" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    app:expandedHintEnabled="false"
+                    android:background="@drawable/round_gray_border"
+                    app:endIconMode="password_toggle"
+                    app:passwordToggleDrawable="@drawable/password_selector">
+                    <EditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen55"
+                        android:fontFamily="@font/outfit_regular"
+                        android:textColor="@color/black"
+                        android:inputType="textPassword"
+                        android:background="@android:color/transparent"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/forgot_pwd_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="12dp"
+                    android:clickable="true"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/forgot_password"
+                    android:textColor="@drawable/link_bg" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_48"
+                    android:background="@drawable/btn_selector"
+                    android:fontFamily="@font/outfit_semibold"
+                    android:text="@string/login"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dimen32"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    >
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:background="@color/gray"
+                        android:layout_gravity="center"
+                        android:layout_weight="35" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=" or "
+                        android:textSize="@dimen/dimen24"
+                        android:textColor="@color/gray"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/outfit_medium"
+                        android:layout_weight="30"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:background="@color/gray"
+                        android:layout_gravity="center"
+                        android:layout_weight="35" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/login_with_otp_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/login_with_mobile_and_otp"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/link_bg"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

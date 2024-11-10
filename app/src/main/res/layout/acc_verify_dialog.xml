@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round_10bg"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen15">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Update"
+            android:textColor="@color/black"
+            android:fontFamily="@font/outfit_medium"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:id="@+id/close_payment_update_dialog"
+            android:layout_width="@dimen/dimen20"
+            android:layout_height="@dimen/dimen20"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_cross"
+            android:padding="@dimen/dimen3" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen50"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:hint="@string/total_amount_txt">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/total_amount_tv"
+                android:maxLines="1"
+                android:editable="false"
+                android:textColor="@color/black"
+                android:padding="@dimen/dimen5"
+                android:focusable="false"
+                android:singleLine="true"
+                android:fontFamily="@font/outfit_regular"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen50"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:hint="@string/amount_paid">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen5"
+                android:editable="false"
+                android:focusable="false"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/amountPaidTV"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputEditText.OutlinedBox.CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen50"
+            android:layout_marginVertical="@dimen/dimen_4"
+            app:expandedHintEnabled="false"
+            android:hint="@string/amount_due">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:editable="false"
+                android:focusable="false"
+                android:padding="@dimen/dimen5"
+                android:fontFamily="@font/outfit_regular"
+                android:id="@+id/amount_dueET"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/paymentRecieptRv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginVertical="@dimen/dimen20"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/payment_receipt"/>
+
+        <ImageView
+            android:id="@+id/add_more_payment_receiptIV"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_60"
+            android:background="@drawable/ic_add"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dimen10"/>
+        <TextView
+            android:id="@+id/update_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen15"
+            android:paddingVertical="@dimen/dimen5"
+            android:background="@drawable/green_round_bg"
+            android:textColor="@color/white"
+            android:fontFamily="@font/outfit_regular"
+            android:text="Update"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dimen10"/>
+    </LinearLayout>
+</LinearLayout>
+</layout>

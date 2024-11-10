@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+<TextView
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:ellipsize="end"
+    android:text="items"
+    android:id="@+id/title_tv"
+    android:textColor="@color/black"
+    android:maxLines="1"
+    android:textAppearance="?attr/textAppearanceSubtitle1"
+    android:fontFamily="@font/outfit_medium"
+    android:padding="@dimen/dimen_8">
+
+</TextView>
+</layout>

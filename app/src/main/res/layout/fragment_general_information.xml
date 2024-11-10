@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="@dimen/dimen_8"
+        tools:context=".screens.fragments.GeneralInformationFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/delivery_agent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/hint_delivery_agent"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@id/delivery_agentTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/delivery_agent"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/delivery_agentTV"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+                <ImageView
+                    android:id="@+id/da_call_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:padding="@dimen/dimen_4"
+                    android:src="@drawable/ic_phone_call" />
+
+                <ImageView
+                    android:id="@+id/da_user_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen16"
+                    android:visibility="gone"
+                    android:layout_toStartOf="@id/da_call_iv"
+                    android:src="@drawable/ic_user_with_plus" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sale_exe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/hint_sale_exe"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/sale_exeTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sale_exe"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/sale_exeTV"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+                <ImageView
+                    android:id="@+id/sale_call_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:padding="@dimen/dimen_4"
+                    android:src="@drawable/ic_phone_call" />
+
+                <ImageView
+                    android:id="@+id/sale_whatsapp_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen16"
+                    android:layout_toStartOf="@id/sale_call_iv"
+                    android:padding="@dimen/dimen3"
+                    android:src="@drawable/ic_whatsapp_green_border" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/hint_dis_manager"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/disTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dis"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/disTV"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+                <ImageView
+                    android:id="@+id/dis_call_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:padding="@dimen/dimen_4"
+                    android:src="@drawable/ic_phone_call" />
+
+                <ImageView
+                    android:id="@+id/dis_whatsapp_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen16"
+                    android:layout_toStartOf="@id/dis_call_iv"
+                    android:padding="@dimen/dimen3"
+                    android:src="@drawable/ic_whatsapp_green_border" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/arch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/hint_architect"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/archTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/arch"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/archTV"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+                <ImageView
+                    android:id="@+id/arch_call_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:padding="@dimen/dimen_4"
+                    android:src="@drawable/ic_phone_call" />
+
+                <ImageView
+                    android:id="@+id/arch_whatsapp_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen16"
+                    android:layout_toStartOf="@id/arch_call_iv"
+                    android:padding="@dimen/dimen3"
+                    android:src="@drawable/ic_whatsapp_green_border" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cust"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/hint_customer_name"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/custTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cust"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/custTV"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+                <ImageView
+                    android:id="@+id/cust_call_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:padding="@dimen/dimen_4"
+                    android:src="@drawable/ic_phone_call" />
+
+                <ImageView
+                    android:id="@+id/cust_whatsapp_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen16"
+                    android:layout_toStartOf="@id/cust_call_iv"
+                    android:padding="@dimen/dimen3"
+                    android:src="@drawable/ic_whatsapp_green_border" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/hint_address"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/addressTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text=""
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:layout_toStartOf="@id/address_call_iv"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/addressTV"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+                <ImageView
+                    android:id="@+id/address_call_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_12"
+                    android:padding="@dimen/dimen_4"
+                    android:src="@drawable/ic_loc" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/order_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="New Order / Shortage Order"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <RadioGroup
+                    android:id="@+id/group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="@dimen/dimen10"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/green_round_border_bg"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="@dimen/dimen_12">
+
+                    <RadioButton
+                        android:id="@+id/new_order_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/black_selector"
+                        android:button="@null"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:textAlignment="center"
+                        android:text="New Order"
+                        android:textColor="@color/black_white_selector"
+                        android:textSize="@dimen/dimen_8" />
+
+                    <RadioButton
+                        android:id="@+id/shortage_order_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:textAlignment="center"
+                        android:background="@drawable/black_selector"
+                        android:text="Shortage Order"
+                        android:textColor="@color/black_white_selector"
+                        android:textSize="@dimen/dimen_8" />
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/group"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/delivery_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="In-station / Outstation"
+                    android:textColor="@color/hint_text_gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <RadioGroup
+                    android:id="@+id/group2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="@dimen/dimen10"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/green_round_border_bg"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="@dimen/dimen_12">
+
+                    <RadioButton
+                        android:id="@+id/instation_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/black_selector"
+                        android:button="@null"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:textAlignment="center"
+                        android:text="In-station"
+                        android:textColor="@color/black_white_selector"
+                        android:textSize="@dimen/dimen_8" />
+
+                    <RadioButton
+                        android:id="@+id/outstation_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:paddingHorizontal="@dimen/dimen_8"
+                        android:textAlignment="center"
+                        android:background="@drawable/black_selector"
+                        android:text="Outstation"
+                        android:textColor="@color/black_white_selector"
+                        android:textSize="@dimen/dimen_8" />
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/group2"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/expectedDD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Expected Delivery Date"
+                    android:textColor="@color/hint_text_gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/expectedDDTV1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/expectedDD"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="12 March, 2024, 1st Half"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dimen14" />
+                <TextView
+                    android:id="@+id/expectedDDTV2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/expectedDDTV1"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="15 March, 2024, 1st Half"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/dimen14" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/historyTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/black_round_bg"
+                        android:text="History"
+                        android:layout_toStartOf="@id/rescheduleTV"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/dimen6"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dimen_12" />
+                <TextView
+                    android:id="@+id/rescheduleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/black_round_bg"
+                    android:text="Reschedule"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dimen6"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/expectedDDTV2"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Mode of transport"
+                    android:textColor="@color/hint_text_gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/modeTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mode"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Ola"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/modeTV"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Total Amount"
+                    android:textColor="@color/hint_text_gray"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/totalTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/total"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="Rs. 140/-"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/totalTV"
+                    android:layout_marginVertical="@dimen/dimen5"
+                    android:background="@color/hint_text_gray" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+</layout>

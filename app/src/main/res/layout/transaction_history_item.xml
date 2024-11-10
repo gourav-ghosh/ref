@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/itemLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dimen_4"
+        android:background="@drawable/gray_border_grayish_fill_bg"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/order_numTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="12345"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/dimen_12"
+            android:fontFamily="@font/outfit_medium" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:layout_marginEnd="2dp" />
+        <TextView
+            android:id="@+id/sale_exe_TV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:text="Hari"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/dimen_12"
+            android:textColor="@color/orange"
+            android:fontFamily="@font/outfit_medium" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:layout_marginEnd="2dp" />
+        <TextView
+            android:id="@+id/client_nameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:layout_gravity="center_vertical"
+            android:text="Gurumukh India PRV. LTD."
+            android:textColor="@color/hint_text_gray"
+            android:textSize="@dimen/dimen_12"
+            android:fontFamily="@font/outfit_medium" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:layout_marginEnd="2dp" />
+        <TextView
+            android:id="@+id/accountTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:paddingVertical="@dimen/dimen_8"
+            android:layout_gravity="center_vertical"
+            android:text="Admin"
+            android:textColor="@color/hint_text_gray"
+            android:textSize="@dimen/dimen_12"
+            android:fontFamily="@font/outfit_medium" />
+    </LinearLayout>
+
+</layout>

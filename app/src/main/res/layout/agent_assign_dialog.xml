@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/white_round_10bg"
+    android:padding="@dimen/dimen_12"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assign Delivery Agent"
+            android:fontFamily="@font/outfit_regular"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/dimen16" />
+
+        <ImageView
+            android:id="@+id/close_assign_agent_dialog"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_cross"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dimen3" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/close_assign_agent_dialog">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/close_assign_agent_dialog"
+            android:layout_marginVertical="@dimen/dimen10"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:hint="@string/delivery_agent_name_req"
+                app:endIconDrawable="@drawable/ic_dropdown"
+                app:expandedHintEnabled="false">
+
+                <AutoCompleteTextView
+                    android:id="@+id/agent_assign"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/outfit_regular"
+                    android:padding="@dimen/dimen5" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/delivery_mode_dropdown"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:layout_marginBottom="@dimen/dimen_4"
+                android:hint="@string/select_delivery_mode"
+                app:endIconDrawable="@drawable/ic_dropdown"
+                app:expandedHintEnabled="false">
+
+                <AutoCompleteTextView
+                    android:id="@+id/delivery_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/outfit_regular"
+                    android:padding="@dimen/dimen5"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/select_payer_dropdown"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:layout_marginBottom="@dimen/dimen_4"
+                android:visibility="gone"
+                android:hint="@string/select_payer"
+                app:endIconDrawable="@drawable/ic_dropdown"
+                app:expandedHintEnabled="false">
+
+                <AutoCompleteTextView
+                    android:id="@+id/payer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/outfit_regular"
+                    android:padding="@dimen/dimen5"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/poOptionsRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:background="@color/white"
+                android:isScrollContainer="false"
+                tool:listitem="@layout/assign_po_item" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/hint_text_gray"
+                android:layout_marginVertical="@dimen/dimen_4"
+                android:hint="Instruction"
+                app:expandedHintEnabled="false">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/instructionET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:gravity="top"
+                    android:hint="Please Follow up with"
+                    android:padding="@dimen/dimen_8"
+                    android:minHeight="@dimen/dimen80"
+                    android:textColorHint="@color/hint_text_gray" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/helpingAgentsRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginVertical="@dimen/dimen10"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:isScrollContainer="false"
+                tool:listitem="@layout/helping_agent_assigning_form" />
+            <ImageView
+                android:id="@+id/add_more_helping_agentsIV"
+                android:layout_width="@dimen/dimen_60"
+                android:layout_height="@dimen/dimen_60"
+                android:background="@drawable/ic_add"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:layout_marginVertical="@dimen/dimen10" />
+            <TextView
+                android:id="@+id/update_agentTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/green_round_bg"
+                android:paddingHorizontal="@dimen/dimen20"
+                android:paddingVertical="@dimen/dimen6"
+                android:text="Assign Agent"
+                android:textColor="@color/white"
+                android:layout_gravity="end"
+                android:layout_marginVertical="@dimen/dimen10" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

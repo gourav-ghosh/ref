@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+
+        />
+    <item
+        android:id="@+id/nav_leads"
+        android:title="Manage Leads"
+        android:icon="@drawable/ic_manageleads"/>
+    <item
+        android:id="@+id/nav_orders"
+        android:title="Manage Quotes"
+        android:icon="@drawable/ic_manageorders"/>
+<!--    <item-->
+<!--        android:id="@+id/nav_razorpay"-->
+<!--        android:title="Razorpay"-->
+<!--        android:icon="@drawable/ic_razorpay_link"/>-->
+<!--    <item-->
+<!--        android:id="@+id/nav_complaint"-->
+<!--        android:title="Complaint"-->
+<!--        android:icon="@drawable/ic_complaint"/>-->
+</menu>

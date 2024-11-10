@@ -1,0 +1,73 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MytylesStockCheck" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:dialogTheme">@style/TransparentDialogTheme</item>
+
+    </style>
+
+    <style name="FilePickerTheme" parent="Base.Theme.MytylesStockCheck">
+        <!-- Customize your theme here. set LibAppTheme.Dark for dark themes-->
+
+    </style>
+
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:fontFamily">@font/outfit_medium</item>
+    </style>
+
+    <style name="TransparentDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:dialogCornerRadius" tools:targetApi="p">10dp</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_bg</item>
+    </style>
+
+    <style name="Theme.MytylesStockCheck" parent="Base.Theme.MytylesStockCheck">
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:dialogTheme">@style/TransparentDialogTheme</item>
+    </style>
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <!--on below line we are setting background as transparent color-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--on below line we are displaying the windowNotitle as true as we are not displaying our status bar-->
+        <item name="android:windowNoTitle">true</item>
+        <!--on below line we are setting our window background as transparent color-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--on below line we are setting color background cache hint as null-->
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <!--on below line we are adding a window translucent as true-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--on below line we are adding a window animationstyle-->
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">@color/light_grey</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="Base.Theme.MytylesStockCheck">
+        <item name="android:dropDownListViewStyle">@style/SpinnerStyle</item>
+        <item name="android:fontFamily">@font/outfit_medium</item>
+        <item name="android:dropDownSelector">@color/red</item>
+    </style>
+
+    <style name="TextInputEditText.OutlinedBox.CustomFont" parent="ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:fontFamily">@font/outfit_medium</item>
+    </style>
+
+    <style name="ThemeOverlay.MytylesStockCheck.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/edit_quote"
+        android:title="Edit" />
+    <item
+        android:id="@+id/dispatch"
+        android:title="Convert to Order" />
+    <item
+        android:id="@+id/print"
+        android:title="Print / Download" />
+    <item
+        android:id="@+id/recheck_all"
+        android:title="Recheck All" />
+    <item
+        android:id="@+id/share"
+        android:title="Share" />
+</menu>

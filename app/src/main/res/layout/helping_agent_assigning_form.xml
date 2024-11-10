@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/receiptLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen15"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:background="@drawable/gray_border_white_fill_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen10">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/helpingAgentTitleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen16"
+                    android:text="Helping Agent [ " />
+                <TextView
+                    android:id="@+id/helping_agent_sr_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:layout_toRightOf="@+id/helpingAgentTitleTV"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen16"
+                    android:fontFamily="@font/outfit_medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/helping_agent_sr_num"
+                    android:textSize="@dimen/dimen16"
+                    android:text=" ]" />
+                <ImageView
+                    android:id="@+id/removeAgentIV"
+                    android:layout_width="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen20"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_cross" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/close_assign_agent_dialog"
+                android:layout_marginVertical="@dimen/dimen10"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:id="@+id/agentAssignDropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:hint="@string/delivery_agent_name_req"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/agent_assign"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/outfit_regular"
+                        android:padding="@dimen/dimen5" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                    android:id="@+id/expDeliveryDateInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:layout_marginVertical="@dimen/dimen10"
+                    android:hint="@string/expected_delivery_date"
+                    android:visibility="visible"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/expected_delivery_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_calender"
+                        android:editable="false"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:hint="dd/mm/yyyy"
+                        android:paddingStart="@dimen/dimen_12"
+                        android:paddingVertical="@dimen/dimen5"
+                        android:textSize="@dimen/dimen_12"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:id="@+id/expDeliveryTimeInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/expected_delivery_time_mandatory"
+                    app:endIconDrawable="@drawable/ic_dropdown"
+                    app:expandedHintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/expected_delivery_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen50"
+                        android:ellipsize="end"
+                        android:hint="Expected Delivery Time"
+                        android:textSize="@dimen/dimen_12"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/dimen_12"
+                        android:textColor="@color/black"
+                        android:paddingVertical="@dimen/dimen10" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/poOptionsRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:background="@color/white"
+                    android:isScrollContainer="false"
+                    tool:listitem="@layout/assign_po_item" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/hint_text_gray"
+                    android:layout_marginVertical="@dimen/dimen_4"
+                    android:hint="Instruction"
+                    app:expandedHintEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/instructionET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="top"
+                        android:gravity="top"
+                        android:hint="Please Follow Instruction"
+                        android:padding="@dimen/dimen_8"
+                        android:minHeight="@dimen/dimen80"
+                        android:textColorHint="@color/hint_text_gray" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

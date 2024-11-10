@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/receipt_sr_num"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="1"
+            android:textColor="@color/black"
+            android:fontFamily="@font/outfit_regular"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:elevation="@dimen/dimen10"
+            android:gravity="center"
+            android:background="@drawable/black_border_whitefill_circle_bg" />
+
+        <LinearLayout
+            android:id="@+id/receiptLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen15"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:background="@drawable/gray_dotted_round_border"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen10">
+
+            <ImageView
+                android:id="@+id/remove_receiptIV"
+                android:layout_width="@dimen/dimen20"
+                android:layout_height="@dimen/dimen20"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_cross" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:layout_marginVertical="@dimen/dimen_4"
+                android:hint="@string/amount_paid_mandatory"
+                app:expandedHintEnabled="false">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/amountPaidTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/outfit_regular"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:digits="0987654321"
+                    android:padding="@dimen/dimen5" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:layout_marginVertical="@dimen/dimen_4"
+                android:hint="@string/payment_mode_mandatory"
+                app:endIconDrawable="@drawable/ic_dropdown"
+                app:expandedHintEnabled="false">
+
+                <AutoCompleteTextView
+                    android:id="@+id/payment_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/outfit_regular"
+                    android:padding="@dimen/dimen5"
+                    android:textColor="@color/black"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputEditText.OutlinedBox.CustomFont"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:layout_marginVertical="@dimen/dimen_4"
+                android:hint="Ref. Number"
+                app:expandedHintEnabled="false">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/ref_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen5"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/outfit_regular" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

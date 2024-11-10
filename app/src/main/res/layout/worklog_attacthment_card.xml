@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dimen100"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen30"
+        android:layout_marginRight="@dimen/dimen10"
+        android:layout_marginVertical="@dimen/dimen_4">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:paddingVertical="@dimen/dimen_4"
+            android:background="@drawable/gray_border_round_30dp">
+            <ImageView
+                android:id="@+id/doctypeIV"
+                android:layout_width="@dimen/dimen10"
+                android:layout_height="@dimen/dimen10"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen2"
+                android:src="@drawable/ic_pdf"/>
+            <TextView
+                android:id="@+id/docName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_regular"
+                android:textSize="@dimen/dimen10"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_toRightOf="@id/doctypeIV"
+                android:text="PDF Name"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
